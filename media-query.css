@@ -1,0 +1,92 @@
+/* ✅ Responsive Breakpoints */
+
+/* Tablets */
+@media (max-width: 992px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation ul {
+    gap: 15px;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .text-box h1 {
+    font-size: 36px;
+  }
+
+  .home {
+    flex-direction: column;
+    padding: 100px 20px 40px;
+  }
+
+  .home .text-box,
+  .home .img {
+    flex: 1 1 100%;
+  }
+
+  .home .img {
+    text-align: center;
+  }
+
+  .home .img .laptop {
+    max-width: 80%;
+  }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  .text-box h1 {
+    font-size: 30px;
+  }
+
+  .text-box p {
+    font-size: 14px;
+  }
+
+  .btn-box .btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .navigation.open {
+    max-height: 300px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navigation ul li a {
+    padding: 10px 20px;
+    display: block;
+    margin-left: 0;
+  }
+}
