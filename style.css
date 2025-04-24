@@ -299,6 +299,102 @@ header {
   bottom: 0rem;
   top: -5rem;
 }
+
+.section-about-us {
+  padding: 4.5rem 9rem;
+}
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4.6rem;
+}
+.about-us-span {
+  color: #2260e6;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1.9rem;
+}
+.about-us-heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 3.4rem;
+  margin-bottom: 2.6rem;
+  color: #444;
+  /* color: #2260e6; */
+}
+.about-us-heading-hr-line {
+  /* color: #2260e6; */
+  background-color: #2260e6ef;
+  border: none;
+  margin-top: 0.3rem;
+  width: 82%;
+  height: 0.5rem;
+  border-radius: 0.3rem;
+  font-weight: bolder;
+}
+.about-us-text {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  padding-right: 6rem;
+}
+.our-vision-and-goal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.8rem;
+  margin: 3rem 0rem 2rem 0rem;
+  /* padding: 1.2rem 2.4rem; */
+}
+.our-vision-icon,
+.our-goal-icon {
+  color: #fdf2e9;
+
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #2260e6;
+  padding: 0.8rem;
+  border-radius: 50%;
+  margin-bottom: 1.3rem;
+}
+.our-vision-title,
+.our-goal-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e67e22;
+  margin-bottom: 0.8rem;
+}
+.our-goal-text,
+.our-vision-text {
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  padding-right: 6rem;
+  color: #747373;
+}
+.our-goal-text {
+  padding-right: 12rem;
+}
+.contact-us-link {
+  background-color: #2260e6;
+  padding: 1.3rem 2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  word-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+.contact-us-link:hover {
+  background-color: #144abd;
+}
+.contact-us-link:visited {
+  color: #45260a;
+}
 /* Toggle button style */
 .menu-toggle {
   display: none;
