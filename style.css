@@ -302,11 +302,109 @@ header {
 
 .section-about-us {
   padding: 4.5rem 9rem;
+  background-color: whitesmoke;
 }
 .about-us {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 4.6rem;
+}
+/* .about-us-img-box {
+  background-color: whitesmoke;
+  position: relative;
+  margin-top: -10rem; 
+} */
+
+.about-us-img-box-container,
+.about-us-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  height: 85vh;
+  gap: 0.675rem;
+  margin-top: -5rem;
+}
+.card {
+  position: relative;
+}
+.cardImg {
+  background-color: white;
+  width: 50rem;
+  height: 45rem;
+  border-radius: 1rem solid white;
+  overflow: hidden;
+  position: relative;
+}
+.cardImg img {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.tag {
+  background-color: rgb(0, 119, 255);
+  width: 24rem;
+  height: 20rem;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--bg-color); */
+  border-top: 1rem solid white;
+  border-left: 1rem solid white;
+  border-radius: 1.25rem 0 0 0;
+  padding: 0.525rem;
+  color: white;
+}
+.tag::after {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  position: absolute;
+  top: -3.5rem;
+  right: 49.6px;
+  border-bottom-right-radius: 1.2rem;
+  box-shadow: 0.375rem 0.375rem white;
+}
+.tag p {
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+.tag span {
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.about-img {
+  position: absolute;
+  width: 90%;
+  height: 60%;
+  top: 1.5rem;
+  right: 4rem;
+  border-right: 1rem solid white;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem;
+}
+
+.img-box {
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 .about-us-span {
   color: #2260e6;
@@ -342,7 +440,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 1.8rem;
-  margin: 3rem 0rem 2rem 0rem;
+  margin: 3rem 0rem 3rem 0rem;
   /* padding: 1.2rem 2.4rem; */
 }
 .our-vision-icon,
@@ -376,6 +474,7 @@ header {
 .contact-us-link {
   background-color: #2260e6;
   padding: 1.3rem 2rem;
+  margin-top: 1rem;
   font-size: 1.4rem;
   text-transform: uppercase;
   display: inline-flex;
