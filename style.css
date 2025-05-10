@@ -302,12 +302,12 @@ header {
 
 .section-about-us {
   padding: 4.5rem 9rem;
-  background-color: whitesmoke;
 }
 .about-us {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 4.6rem;
+  background-color: whitesmoke;
 }
 /* .about-us-img-box {
   background-color: whitesmoke;
@@ -324,7 +324,7 @@ header {
   padding: 1.25rem;
   height: 85vh;
   gap: 0.675rem;
-  margin-top: -5rem;
+  margin-top: -4rem;
 }
 .card {
   position: relative;
@@ -411,6 +411,7 @@ header {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1.9rem;
+  padding-top: 1.5rem;
 }
 .about-us-heading {
   font-size: 3.5rem;
@@ -444,7 +445,8 @@ header {
   /* padding: 1.2rem 2.4rem; */
 }
 .our-vision-icon,
-.our-goal-icon {
+.our-goal-icon,
+.des-card-icon {
   color: #fdf2e9;
 
   width: 2.4rem;
@@ -493,6 +495,111 @@ header {
 }
 .contact-us-link:visited {
   color: #45260a;
+}
+.section-landscape {
+  /* padding: 4.5rem 9rem; */
+  /* background-color: greenyellow; */
+  position: relative;
+}
+.landscape-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: whitesmoke; */
+}
+.heading {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  height: 15rem;
+  position: relative;
+}
+.heading-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%;
+  position: absolute;
+  bottom: 2rem;
+}
+.heading-title {
+  max-width: 75%;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+.heading-button {
+  background-color: #144abd;
+  color: #fdf2e9;
+  border-radius: 2rem;
+  font-size: 12px;
+  padding: 4px 8px;
+  border: none;
+  box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+.heading-button:hover {
+  background-color: #0f378f;
+}
+
+.landscpe-img-background {
+  height: 30rem;
+  background-image: url(assets/landscpae-img.webp);
+  filter: contrast(20%);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  overlay: 10px;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+}
+.lansdscape-des {
+  background-color: white;
+  max-width: 53.5%;
+  height: 29rem;
+  padding: 3rem 4rem 3rem 8rem;
+  border-radius: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 1rem;
+  align-self: center;
+  position: absolute;
+  top: 14rem;
+}
+.des-card {
+  padding: 1rem 1.3rem;
+  position: relative;
+}
+.des-card::after {
+  content: "";
+  width: 1px;
+  height: 9rem;
+  border-left: dashed 3px rgba(31, 66, 99, 0.137);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: -2.4rem;
+  top: 4rem;
+}
+.card-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.card-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+.des-card-icon {
+  background-color: rgba(0, 110, 255, 0.26);
+  color: #013bfabe;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  left: -4rem;
+  top: 1rem;
 }
 /* Toggle button style */
 .menu-toggle {
