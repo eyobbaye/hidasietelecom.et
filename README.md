@@ -1,10 +1,12 @@
-Hidasie Telecom S.C Official Website
+# Hidasie Telecom S.C Official Website
 
 Welcome to the official website repository of Hidasie Telecom S.C. This project contains the complete front-end source code, built using modern web technologies such as HTML5, CSS3, and vanilla JavaScript to ensure a clean, professional, and responsive user experience.
-🌐 Overview
+
+## 🌐 Overview
 
 This website provides visitors with essential information about Hidasie Telecom’s services, products, and corporate initiatives. It is fully responsive and optimized for seamless viewing across desktop, tablet, and mobile devices.
-✨ Features
+
+## ✨ Features
 
     📱 Responsive Design – Adapts smoothly across all screen sizes.
 
@@ -16,23 +18,23 @@ This website provides visitors with essential information about Hidasie Telecom�
 
     ⚡ Optimized Performance – Fast loading with well-structured, semantic code.
 
-    💻 Built With – HTML5, CSS3, and JavaScript (no frameworks or libraries required).
+    💻 Built With – HTML5, CSS3, and JavaScript.
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 To view or run the website locally:
 
     Clone the repository:
 
-    git clone https://github.com/eyobbaye/hidasietelecom.e
+    git clone https://github.com/eyobbaye/hidasietelecom.et
 
     Open the project:
 
     Navigate to the cloned directory and open the index.html file in any modern web browser.
 
-    📌 Note: This is a static website. No build tools or dependencies are required.
+    <!-- 📌 Note: This is a static website. No build tools or dependencies are required. -->
 
-🤝 Contributing
+## 🤝 Contributing
 
 We welcome contributions from the community!
 
