@@ -618,7 +618,7 @@ header {
   height: 45.9rem;
   position: relative;
   padding: 3rem;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
 }
 .text-box-workwith-us .sub-heading {
   font-size: 1.4rem;
@@ -640,21 +640,26 @@ header {
   padding: 1rem 9rem 0 3rem;
   text-wrap: wrap;
   list-style: none;
-  line-height: 2.5;
+  line-height: 2;
   width: 395px;
   height: 289px;
 }
 .values-items .list-value {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   justify-content: space-between;
-  padding: 0 60px;
+  padding: 0 2rem;
   width: 395px;
   height: 64px;
-  margin-bottom: 4rem;
-  margin-top: -8px;
+  margin-bottom: 1rem;
   position: relative;
+  margin-left: 2rem;
 }
+.list-value:nth-child(2) {
+  margin-bottom: 4.5rem;
+  margin-top: 3.5rem;
+}
+
 .values-items .list-title {
   font-size: 1.6rem;
   font-weight: 500;
@@ -663,7 +668,6 @@ header {
 .values-items .description {
   font-size: 1rem;
   line-height: 1.6;
-  margin-top: -5 px;
 }
 .values-items .values-icon {
   position: absolute;
@@ -675,6 +679,7 @@ header {
   color: white;
   top: 15px;
   margin-left: -70px;
+  margin-top: -0.8rem;
 }
 .work-with-us .working-with-usimage-box {
   width: 48.5rem;
@@ -689,18 +694,31 @@ header {
   width: 485px;
   height: 400px;
   position: relative;
+  z-index: 1;
 }
 .group-card {
   width: 370px;
   height: 400px;
   margin-top: 60px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: start;
   padding: 2rem;
   border-radius: 2.6rem;
-  position: relative;
+}
+.group-card::after {
+  content: " ";
+  width: 354px;
+  height: 356px;
+  position: absolute;
+  background-color: rgba(89, 176, 230, 0.5);
+  opacity: 40%;
+  top: -6.5rem;
+  right: 20px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 0px 0px 60px 35px rgba(89, 176, 230, 0.6);
 }
 .rectangle {
   width: 321px;
@@ -768,7 +786,7 @@ header {
   padding: 2rem;
   position: absolute;
   top: 230px;
-  right: -30%;
+  right: -1.5%;
 
   display: grid;
   grid-template-columns: 1fr 3fr;
