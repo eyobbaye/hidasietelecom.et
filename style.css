@@ -916,7 +916,37 @@ header {
   color: #242323;
   margin-top: 2rem;
 }
-
+.last-insights {
+  padding: 4.5rem 9rem;
+  background-color: whitesmoke;
+}
+.last-insights-header {
+  /* background-color: #0808ee; */
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.insights-title {
+  font-size: 3.2rem;
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.insights-description {
+  font-size: 1.4rem;
+  color: #333;
+  width: 61%;
+  align-self: center;
+  line-height: 2rem;
+}
+.last-insights-card {
+  background-color: #0c69e4;
+}
+.last-card {
+  background-color: red;
+}
 /* Navigation responsive behavior */
 .navigation {
   transition: max-height 0.3s ease;
