@@ -607,18 +607,18 @@ header {
   margin-top: 4rem;
   width: 114rem;
   height: 49.2rem;
-  background-color: whitesmoke;
+  /* background-color: rgb(190, 56, 56); */
   display: flex;
   justify-content: center;
-  column-gap: 3.4rem;
   align-items: center;
+  position: relative;
+  gap: 20rem;
 }
 .text-box-workwith-us {
-  width: 60rem;
+  width: 60%;
   height: 45.9rem;
   position: relative;
   padding: 3rem;
-  /* background-color: antiquewhite; */
 }
 .text-box-workwith-us .sub-heading {
   font-size: 1.4rem;
@@ -682,7 +682,7 @@ header {
   margin-top: -0.8rem;
 }
 .work-with-us .working-with-usimage-box {
-  width: 48.5rem;
+  width: 40%;
   height: 45.9rem;
 }
 
@@ -821,6 +821,100 @@ header {
   cursor: pointer;
   z-index: 100;
   color: #0808ee;
+}
+/* SECTION testimonials */
+.testimonials {
+  padding: 4.5rem 9rem;
+  /* background-color: #45260a; */
+}
+.testimonials-container {
+  padding: 0rem 9rem;
+  /* background-color: whitesmoke; */
+}
+.testimonials-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials-title {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #444;
+}
+.testimonials-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333;
+  padding: 0rem 0rem;
+}
+.testimonals-main {
+  background-color: white;
+  padding: 3rem 10rem;
+
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+}
+.testimonals-card {
+  background-color: white;
+  padding: 0.5rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-self: center;
+  border-radius: 2rem;
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.1);
+  column-gap: 3rem;
+  width: 900px;
+  height: 400px;
+}
+.testimonals-card ::after {
+  content: ;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.testimonals-main::after {
+  content: " ";
+  background-color: rgb(255, 187, 0);
+  position: absolute;
+  z-index: -1;
+  width: 900px;
+  height: 400px;
+  right: 9rem;
+  border-radius: 1.5rem;
+  rotate: -3deg;
+  box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.1);
+}
+.card-imge-box {
+  /* background-color: #0f378f; */
+}
+.card-imge-box img {
+  width: 202px;
+  height: 180px;
+  border-radius: 1rem;
+}
+.first-card {
+  /* background-color: #45260a; */
+}
+.card-text-box {
+  /* background-color: #918b8b; */
+  padding: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-author {
+  font-weight: 600;
+  color: #242323;
+  margin-top: 2rem;
 }
 
 /* Navigation responsive behavior */
