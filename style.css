@@ -858,15 +858,6 @@ header {
   flex-direction: column;
   border-radius: 2rem;
 }
-span .after {
-  right: 0;
-  bottom: 0;
-  position: absolute;
-}
-span .before {
-  font-size: 32px;
-  background-color: red;
-}
 .testimonals-card {
   background-color: white;
   padding: 0.5rem 10rem;
