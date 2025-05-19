@@ -1,6 +1,58 @@
+:root {
+  --color-priamary: #0c54a4;
+  --color-secondary: #faa71d;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d86a1;
+  --color-info-light: #dce1ed;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #ecf0f5;
+  --color-background1: #0c54a4;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-1: 0px -5px 3px var(--color-light);
+  --background-image: linear-gradient(
+      rgba(9, 119, 221, 0.541),
+      rgba(5, 138, 226, 0.589)
+    ),
+    url("assets/hero.jpg");
+}
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --color-background1: #181a1e;
+
+  --color-shadow: 0, 2rem, 3rem var(var(--color-light));
+
+  --background-image: linear-gradient(
+      rgba(40, 41, 43, 0.541),
+      rgba(83, 84, 85, 0.589)
+    ),
+    url("assets/hero.jpg");
+}
 * {
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  list-style: none;
+  outline: none;
   box-sizing: border-box;
 }
 
@@ -618,6 +670,7 @@ header {
   width: 60%;
   height: 45.9rem;
   position: relative;
+  /* box-shadow: 0px 0px 80px 30px rgba(0, 0, 0, 0.1); */
   padding: 3rem;
 }
 .text-box-workwith-us .sub-heading {
@@ -706,6 +759,7 @@ header {
   align-items: start;
   padding: 2rem;
   border-radius: 2.6rem;
+  box-shadow: 0px 0px 80px 10px rgba(0, 0, 0, 0.1);
 }
 .group-card::after {
   content: " ";
@@ -916,34 +970,104 @@ header {
   color: #242323;
   margin-top: 2rem;
 }
-.last-insights {
+/* TEstionials Sectio END */
+
+/* Count Number Section */
+.counter-number {
   padding: 4.5rem 9rem;
   background-color: whitesmoke;
 }
-.last-insights-header {
-  /* background-color: #0808ee; */
-  padding: 2rem 4rem;
+.heading-number {
+  font-size: 24px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  color: var(--color-priamary);
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+.container-counter {
+  display: flex;
+  width: 94%;
+  height: 50px;
+  color: var(--color-secondary);
+  text-align: center;
+}
+.container-counter .counters {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+.container-counter .counters .counter {
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+}
+.container-counter .counters .counter:hover {
+  box-shadow: none;
+  transform: translateY(-5%);
+}
+.container-counter .counters .counter .number {
+  font-size: 30px;
+  font-weight: 600;
+}
+.container-counter .counters .counter p {
+  color: var(--color-priamary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* CHOICE US  section */
+.container-you-choice-us {
+  background: var(--color-white);
+  margin-top: 110px;
+  display: grid;
+  grid-template-columns: 5% 80%;
+  column-gap: 70px;
   justify-content: center;
   align-items: center;
 }
-.insights-title {
-  font-size: 3.2rem;
-  color: #444;
-  font-weight: 600;
-  margin-bottom: 1rem;
+.container-you-choice-us h2 {
+  font-size: 32px;
+  color: var(--color-priamary);
+  margin-top: 14px;
 }
-.insights-description {
-  font-size: 1.4rem;
-  color: #333;
-  width: 61%;
-  align-self: center;
-  line-height: 2rem;
+.container-you-choice-us .content-you-choice-us .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
 }
-.last-insights-card {
-  background-color: #0c69e4;
+.container-you-choice-us .content-you-choice-us .box .description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-dark);
+  width: 50%;
+  line-height: 32px;
 }
+.box1 {
+  margin: 15px 15px;
+}
+.box2 {
+  margin: 15px 15px;
+}
+
+.icons span {
+  color: var(--color-secondary);
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.icons p {
+  /* color: var(--color-priamary); */
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: -20px;
+}
+
 .last-card {
   background-color: red;
 }
