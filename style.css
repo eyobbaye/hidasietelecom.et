@@ -1080,35 +1080,94 @@ h1 {
 /* footer */
 .footer-container {
   background: var(--color-background1);
-  height: 400px;
-  display: grid;
+  min-height: 450px;
   color: var(--color-white);
   text-decoration: none;
-  overflow: none;
-  box-shadow: var(--box-shadow-1);
   z-index: 1;
 }
 .main-footer {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 4rem;
+  column-gap: 4rem;
 }
 .main-footer .logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  margin-top: 40px;
 }
 .main-footer .logo img {
-  width: 120%;
-  height: 100px;
+  width: 100%;
 }
 .main-footer .logo p {
   margin-top: 2rem;
   margin-left: 1rem;
-  font-size: 24px;
+  font-size: 18px;
   color: white;
+}
+.subscribe {
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+.subscribe-container {
+  position: absolute;
+  /* background-color: wheat; */
+}
+.subscribe input {
+  padding: 2rem 4rem;
+  font-size: 1.8rem;
+  color: #3333338a;
+  text-align: center;
+  border-radius: 5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.subscribe .subscribe-link {
+  position: absolute;
+  display: inline;
+  padding: 2.15rem 2rem;
+  background-color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+}
+
+.social-link {
+  /* background: #e2e3e4; */
+  display: flex;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+.social-link-icon {
+  margin-top: -2rem;
+  background-color: wheat;
+}
+.social-link-icon:hover {
+  transition: all 300ms ease;
+}
+.social-link img {
+  width: 4rem;
+  height: 4rem;
+  margin-left: -2rem;
+  transition: all 300ms ease;
+}
+.social-link img:hover {
+  transform: translate(-25%);
+}
+
+.social-link h2 {
+  font-size: 24px;
+  font-weight: 600;
 }
 .footer-link {
   line-height: 30px;
@@ -1133,26 +1192,7 @@ h1 {
   font-weight: 600;
   margin-bottom: 15px;
 }
-.social-link {
-  /* background: #e2e3e4; */
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 12px;
-}
-.social-link img {
-  width: 30px;
-  height: 30px;
-  transition: all 300ms ease;
-}
-.social-link img:hover {
-  transform: translateY(-25%);
-}
 
-.social-link h2 {
-  font-size: 24px;
-  font-weight: 600;
-}
 .copy-right p {
   display: flex;
   justify-content: center;
