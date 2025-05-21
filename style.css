@@ -1083,32 +1083,39 @@ h1 {
   min-height: 450px;
   color: var(--color-white);
   text-decoration: none;
+  justify-items: center;
   z-index: 1;
 }
 .main-footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  /* justify-items: center; */
   row-gap: 4rem;
-  column-gap: 4rem;
+  column-gap: 2rem;
+  padding: 4rem 8rem;
 }
 .main-footer .logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 0rem;
+  padding: 2rem;
 }
 .main-footer .logo img {
   width: 100%;
+  height: 70%;
 }
 .main-footer .logo p {
-  margin-top: 2rem;
-  margin-left: 1rem;
-  font-size: 18px;
-  color: white;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #dce1ed;
 }
 .subscribe {
-  margin-top: 4rem;
+  margin-top: 4.5rem;
   margin-left: 1rem;
 }
 .subscribe-container {
@@ -1116,9 +1123,10 @@ h1 {
   /* background-color: wheat; */
 }
 .subscribe input {
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
   font-size: 1.8rem;
   color: #3333338a;
+  background-color: #dce1ed;
   text-align: center;
   border-radius: 5rem;
   border-top-right-radius: 0;
@@ -1127,30 +1135,34 @@ h1 {
 .subscribe .subscribe-link {
   position: absolute;
   display: inline;
-  padding: 2.15rem 2rem;
+  padding: 2.15rem 1rem;
   background-color: var(--color-secondary);
   text-decoration: none;
   font-size: 1.8rem;
-  color: white;
+  color: #dce1ed;
+
   font-weight: 600;
+  cursor: pointer;
   text-transform: uppercase;
   border-top-right-radius: 5rem;
   border-bottom-right-radius: 5rem;
+  transition: all 0.3s ease;
 }
-
+.subscribe .subscribe-link:hover {
+  background-color: #e4a950;
+}
 .social-link {
-  /* background: #e2e3e4; */
   display: flex;
-  gap: 40px;
+  gap: 4rem;
   display: flex;
   flex-direction: column;
   align-items: start;
   margin-left: 4rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .social-link-icon {
-  margin-top: -2rem;
-  background-color: wheat;
+  margin-top: -4.5rem;
+  padding: 2rem 0rem;
 }
 .social-link-icon:hover {
   transition: all 300ms ease;
@@ -1158,16 +1170,34 @@ h1 {
 .social-link img {
   width: 4rem;
   height: 4rem;
-  margin-left: -2rem;
+  margin-right: 2rem;
   transition: all 300ms ease;
 }
 .social-link img:hover {
-  transform: translate(-25%);
+  transform: translateY(-25%);
 }
 
 .social-link h2 {
   font-size: 24px;
+  letter-spacing: 5px;
   font-weight: 600;
+  color: #dce1ed;
+}
+.footer-about-us {
+  /* background-color: wheat; */
+  padding: 2rem 4rem;
+}
+.footer-about-us h2 {
+  font-size: 2.8rem;
+  color: var(--color-secondary);
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+}
+.footer-about-us p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #dce1ed;
+  line-height: 1.5;
 }
 .footer-link {
   line-height: 30px;
@@ -1178,19 +1208,23 @@ h1 {
 .footer-link a {
   font-size: 12px;
   display: flex;
-  color: white;
+  color: #dce1ed;
   text-decoration: none;
 }
 .footer-link a span {
   font-size: 18px;
   align-self: center;
   padding-right: 10px;
+  color: var(--color-secondary);
 }
 .footer-link h2 {
   color: var(--color-secondary);
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 15px;
+}
+.footer-link h3 {
+  color: #dce1ed;
 }
 
 .copy-right p {
@@ -1199,6 +1233,7 @@ h1 {
   font-size: 18px;
   font-weight: 600;
   color: var(--color-secondary);
+  margin-top: 1rem;
 }
 
 .last-card {
