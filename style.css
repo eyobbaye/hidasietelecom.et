@@ -401,7 +401,7 @@ h1 {
   bottom: 0px;
 }
 .tag {
-  background-color: rgb(0, 119, 255);
+  background-color: var(--color-priamary);
   width: 24rem;
   height: 20rem;
   position: absolute;
@@ -417,6 +417,7 @@ h1 {
   border-radius: 1.25rem 0 0 0;
   padding: 0.525rem;
   color: white;
+  font-weight: 600;
 }
 .tag::after {
   content: "";
@@ -530,7 +531,8 @@ h1 {
   padding-right: 12rem;
 }
 .contact-us-link {
-  background-color: #2260e6;
+  background-color: var(--color-priamary);
+  color: white;
   padding: 1.3rem 2rem;
   margin-top: 1rem;
   font-size: 1.4rem;
@@ -539,7 +541,6 @@ h1 {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
   font-weight: 600;
   word-spacing: 0.3rem;
   letter-spacing: 0.1rem;
@@ -550,17 +551,14 @@ h1 {
   background-color: #144abd;
 }
 .contact-us-link:visited {
-  color: #45260a;
+  color: white;
 }
 .section-landscape {
-  /* padding: 4.5rem 9rem; */
-  /* background-color: greenyellow; */
   position: relative;
 }
 .landscape-container {
   display: flex;
   flex-direction: column;
-  /* background-color: whitesmoke; */
 }
 .heading {
   background-color: whitesmoke;
@@ -574,17 +572,18 @@ h1 {
   justify-content: space-between;
   max-width: 60%;
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
 }
 .heading-title {
   max-width: 75%;
-  font-size: 24px;
+  font-size: 2.4rem;
   color: #333;
   font-weight: 600;
 }
 .heading-button {
-  background-color: #144abd;
+  background-color: var(--color-priamary);
   color: #fdf2e9;
+  font-weight: 600;
   border-radius: 2rem;
   font-size: 12px;
   padding: 4px 8px;
@@ -613,6 +612,7 @@ h1 {
   max-width: 53.5%;
   height: 29rem;
   padding: 3rem 4rem 3rem 8rem;
+  margin-top: -1rem;
   border-radius: 1rem;
 
   display: grid;
@@ -659,16 +659,17 @@ h1 {
 }
 /* SECTION WORK WITH US */
 .work-with-us {
-  padding: 4.5rem 9rem;
   margin-top: 4rem;
   width: 114rem;
   height: 49.2rem;
-  /* background-color: rgb(190, 56, 56); */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   gap: 20rem;
+}
+.work-with-us-container {
+  padding: 4.5rem 9rem;
 }
 .text-box-workwith-us {
   width: 60%;
@@ -928,17 +929,6 @@ h1 {
   width: 900px;
   height: 400px;
 }
-.testimonals-card ::after {
-  content: ;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  background-color: red;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .testimonals-main::after {
   content: " ";
   background-color: rgb(255, 187, 0);
@@ -959,11 +949,7 @@ h1 {
   height: 180px;
   border-radius: 1rem;
 }
-.first-card {
-  /* background-color: #45260a; */
-}
 .card-text-box {
-  /* background-color: #918b8b; */
   padding: 3rem 0rem;
   display: flex;
   flex-direction: column;
@@ -982,16 +968,21 @@ h1 {
   background-color: whitesmoke;
 }
 .heading-number {
-  font-size: 24px;
+  font-size: 2.8rem;
   display: flex;
   justify-content: center;
   color: var(--color-priamary);
-  margin-bottom: 20px;
-  margin-top: 25px;
+  margin-top: 1rem;
+  padding: 2rem 4rem;
+  letter-spacing: 0.9rem;
+  /* background-color: rebeccapurple; */
 }
 .container-counter {
+  padding: 4.5rem 9rem;
+
   display: flex;
-  width: 94%;
+  justify-content: space-between;
+  width: 100%;
   height: 50px;
   color: var(--color-secondary);
   text-align: center;
@@ -1000,9 +991,9 @@ h1 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 25px;
-  margin-top: 20px;
+  margin-top: 0rem;
 }
 .container-counter .counters .counter {
   background: var(--color-white);
@@ -1035,40 +1026,47 @@ h1 {
   background: var(--color-white);
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 4rem;
+  padding: 4rem 4rem;
+  background-color: wheat;
+  border-radius: 1rem;
 }
-.container-you-choice-us h2 {
+.container-you-choice-us .h2 {
   font-size: 32px;
   color: var(--color-priamary);
   margin-top: 1rem;
   line-height: 1;
-}
-.container-you-choice-us .content-you-choice-us .box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-left: 6rem;
+  background-color: white;
+  padding: 4rem 5rem;
 }
 .description .des {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  line-height: 6px;
   font-weight: 400;
   color: var(--color-dark);
+  padding: 0rem 4rem;
   line-height: 32px;
 }
 .icons,
 .expe {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  /* background-color: white; */
+  column-gap: 3rem;
+  margin-top: -2rem;
+  row-gap: 2rem;
+  padding: 2rem 2rem;
 }
 .icons span {
   color: var(--color-secondary);
   font-size: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 4rem;
 }
 .icons .details {
-  font-size: 16px;
-  font-weight: 400;
-  margin-left: -20px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: -10rem;
+  margin-top: 6rem;
 }
 
 /* footer */
