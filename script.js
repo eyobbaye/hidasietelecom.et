@@ -1,4 +1,7 @@
+const copyDate = new Date();
+let copyRightYear = copyDate.getFullYear();
 let allvalues = document.querySelectorAll(".value");
+console.log("date");
 //start forwach loop for displaying the animated values
 allvalues.forEach((singlevalue) => {
   let startValue = 0;
@@ -17,3 +20,6 @@ allvalues.forEach((singlevalue) => {
     }
   }, duration);
 });
+
+const year = document.querySelector("#copy-right-year");
+year.innerHTML = copyRightYear;
