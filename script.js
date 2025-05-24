@@ -2,6 +2,15 @@ const copyDate = new Date();
 let copyRightYear = copyDate.getFullYear();
 let allvalues = document.querySelectorAll(".value");
 console.log("date");
+
+// NAVBAR MENU
+const navbarToggle = document.querySelector(".navbar-toggle");
+const navbarMenu = document.querySelector(".navbar-menu");
+
+navbarToggle.addEventListener("click", () => {
+  navbarToggle.classList.toggle("active");
+  navbarMenu.classList.toggle("active");
+});
 //start forwach loop for displaying the animated values
 allvalues.forEach((singlevalue) => {
   let startValue = 0;
