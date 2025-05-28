@@ -182,7 +182,7 @@ body {
 .hero-section {
   position: relative;
   min-height: 100vh;
-  padding: 0 9rem;
+  padding: 0px 9rem;
   background-image: url(assets/BG.png);
   /* background-color: #0c54a4; */
   background-size: cover;
@@ -192,22 +192,26 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
 }
 
 .hero-section .text-box,
 .hero-section .img {
   flex: 40%;
-  margin-top: 20px;
+  margin-top: 0px;
+  background-color: wheat;
+}
+.text-box {
+  padding: 18rem 0rem;
 }
 
 .text-box h1 {
-  font-size: 4.6rem;
+  font-size: 4rem;
   line-height: 1.2;
   animation: to_right 1s ease forwards 1.3s;
 }
 
-.text-box h1.span {
+.text-box .span {
   color: #0c54a4;
   animation-delay: 1.5s;
 }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Secttion</title>
+  </head>
+  <body>
+    <style>
+      .hero-section {
+        /* background-color: #fdf2e9; */
+        padding: 3.2rem 0 6.4rem 0;
+        /* padding: 4.5rem 9rem; */
+      }
+      .hero {
+        max-width: 130rem;
+        margin: 40px auto;
+        padding: 0 4.8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9rem;
+        align-items: center;
+        /* height: 100vh; */
+      }
+      .heading-primary {
+        font-size: 2.4rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        word-spacing: 2px;
+        letter-spacing: -0.5px;
+        color: #333;
+      }
+      .heading-primary .span {
+        color: #faa71d;
+      } 
+      .hero-img-container {
+       /* background-color: wheat; */
+       overflow-y: hidden;
+      }
+      .hero-img{
+        width: 650px;
+       position: relative;
+       right: 4rem;
+       top: 2.5rem;
+       /* background-color: #faa71d; */
+       overflow: hidden;
+       
+       border-bottom-right-radius: 50%;
+       border-bottom-left-radius: 0%;
+
+
+      }
+      .hero-img::after{
+        content: " ";
+        width: 4rem;
+        height: 4rem;
+        background-color: #333;
+        position: absolute;
+        top: 0rem;
+
+      }
+      .hero-img-container::after{
+        content: " ";
+        width: 10rem;
+        height: 10rem;
+        background-color: #faa71d;
+        position: absolute;
+        border-radius: 50%;
+        padding: 7rem;
+        top: 10rem;
+        right: 10rem;
+        z-index: -1;
+      }
+       .hero-img-container::before  {
+        content: " ";
+        width: 4rem;
+        height: 6rem;
+        background-color: #1d45fa;
+        position: absolute;
+        border-radius: 50%;
+        padding: 5rem;
+        top: 6rem;
+        right: 8rem;
+        z-index: -1;
+      }
+    </style>
+
+    <section class="hero-section">
+      <div class="hero">
+        <div class="hero-text-box">
+          <h1 class="heading-primary"
+            >Elevate Your Connectivity communication Your
+            <span class="span">Empower</span>
+          </h1>
+          <p>
+            We're at the forefront of revolutionizing telecom access across
+            Ethiopia ith over 800 shops nationwide
+            <!-- Ethiopia. With over 800 shops nationwide, we are dedicated to
+            reaching every corner of the country, ensuring that every community
+            can connect seamlessly. -->
+          </p>
+          <span class="hero-btn-box">
+            <button type="button" class="btn">
+              Discover how we can enrich your life today
+            </button>
+          </span>
+        </div>
+        <div class="hero-img-box">
+  <div class="hero-img-container">
+          <img
+              src="assets/horizontal-shot-serious-lovely-woman-with-afro-haircut.png"
+              alt="horizontal-shot-serious-lovely-woman-with-afro-haircut"
+              class="hero-img"
+            />
+            <!-- <div class="first"></div>
+            <div class="second"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
