@@ -43,7 +43,7 @@
       rgba(40, 41, 43, 0.541),
       rgba(83, 84, 85, 0.589)
     ),
-    url("assets/hero.jpg");
+    url("assets/background-imge.png");
 }
 * {
   padding: 0;
@@ -200,6 +200,65 @@ body {
   flex: 40%;
   margin-top: 0px;
   background-color: wheat;
+}
+.hero-section .img {
+  position: relative;
+}
+.hero-section .img .before {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: rgb(61, 60, 60);
+
+  position: absolute;
+  top: 16rem;
+  right: 5rem;
+}
+.hero-section .img .before::after {
+  content: "";
+  width: 12rem;
+  height: 10rem;
+  border-radius: 1rem;
+  background-color: rgb(177, 171, 171);
+
+  position: absolute;
+  top: 15rem;
+  right: 1rem;
+}
+.hero-section .img .after {
+  content: "";
+  width: 12rem;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: rgb(107, 77, 77);
+
+  position: absolute;
+  top: 30rem;
+  left: 14rem;
+}
+.hero-section .img::after {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: rgb(167, 23, 23);
+
+  position: absolute;
+  top: 0rem;
+  right: 9rem;
+}
+.hero-section .img::before {
+  content: "";
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  background-color: rgb(31, 4, 4);
+
+  position: absolute;
+  top: 6rem;
+  left: 15rem;
+  z-index: 1;
 }
 .text-box {
   padding: 18rem 0rem;
