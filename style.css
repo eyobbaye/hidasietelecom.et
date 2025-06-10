@@ -80,7 +80,7 @@ body {
   /* background-color: var(--color-priamary); */
   background-color: #234d7c;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  animation: to_bottom 1s ease forwards 1.3s;
+  /* animation: to_bottom 1s ease forwards 1.3s; */
   z-index: 999;
 }
 .navbar-container {
@@ -130,7 +130,7 @@ body {
   height: 0.3rem;
   margin: 0.5rem auto;
   background-color: #fff;
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
 }
 @media (max-width: 880px) {
   .navbar {
@@ -183,10 +183,9 @@ body {
 
 .hero-section {
   position: relative;
-  height: 100vh;
+  height: 85vh;
   padding: 0px 9rem;
   background-color: #234d7c;
-  /* background-color: whitesmoke; */
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -202,69 +201,11 @@ body {
 }
 .hero-section .img {
   position: relative;
-  margin-top: -10rem;
+  margin-top: -3rem;
 }
-/* 
-.hero-section .img .before {
-  content: " ";
-  width: 6rem;
-  height: 6rem;
-  border-radius: 1rem;
-  background-color: rgb(61, 60, 60);
-
-  position: absolute;
-  top: 16rem;
-  right: 5rem;
-}
-.hero-section .img .before::after {
-  content: "";
-  width: 12rem;
-  height: 10rem;
-  border-radius: 1rem;
-  background-color: rgb(177, 171, 171);
-
-  position: absolute;
-  top: 15rem;
-  right: 1rem;
-}
-.hero-section .img .after {
-  content: "";
-  width: 12rem;
-  height: 6rem;
-  border-radius: 1rem;
-  background-color: rgb(107, 77, 77);
-
-  position: absolute;
-  top: 30rem;
-  left: 14rem;
-}
-.hero-section .img::after {
-  content: "";
-  color: white;
-  width: 6rem;
-  height: 6rem;
-  border-radius: 1rem;
-  background-color: wheat;
-
-  position: absolute;
-  top: 0rem;
-  right: 9rem;
-}
-.hero-section .img::before {
-  content: "";
-  width: 6rem;
-  height: 6rem;
-  border-radius: 1rem;
-  background-color: rgb(31, 4, 4);
-
-  position: absolute;
-  top: 6rem;
-  left: 15rem;
-  z-index: 1;
-} */
 .text-box {
   padding: 15rem 0rem 10rem 2rem;
-  margin-top: -20rem;
+  margin-top: 2rem;
   /* background-color: whitesmoke; */
 }
 .text-box .rated {
@@ -280,7 +221,7 @@ body {
 .rated-icon .star-rate {
   color: var(--color-secondary);
   font-weight: bold;
-  animation: to_right 1s ease forwards 1.4s;
+  animation: to_right 1s ease forwards 1.2s;
 }
 .text-box .text-rate {
   border: 1px solid white;
@@ -290,14 +231,19 @@ body {
   border-radius: 5rem;
   box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
   background-color: var(--color-priamary);
-  animation: to_right 1s ease forwards 1.3s;
+  /* animation: to_right 1s ease; */
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards 1.3s;
 }
 .text-box h1 {
   color: white;
   font-size: 4.8rem;
-  margin-top: -19rem;
+  margin-top: -4rem;
   line-height: 1.4;
-  animation: to_right 1s ease forwards 1.3s;
+  animation: to_right 1s ease;
+  animation-fill-mode: forwards 1.3s;
+
+  /* forwards 1.3s; */
 }
 
 .text-box .span {
@@ -312,14 +258,14 @@ body {
   font-size: 10px;
   line-height: 1.6;
   color: white;
-  animation: to_right 1s ease forwards 1.7s;
+  animation: to_right 1s ease forwards 1.5s;
 }
-.text-box .text-rate,
+.text-box .text-rat,
 .text-box .rated-icon {
   opacity: 0;
 }
 .text-box p,
-h1 {
+h5 {
   opacity: 0;
 }
 .text-box .btn {
@@ -1156,42 +1102,29 @@ h1 {
 /* TEstionials Sectio END */
 
 /* Count Number Section */
-.counter-number {
+/* .counter-number {
   padding: 4.5rem 9rem;
-  background-color: whitesmoke;
-}
-.heading-number {
-  font-size: 2.8rem;
-  display: flex;
-  justify-content: center;
-  color: var(--color-priamary);
-  margin-top: 1rem;
-  padding: 2rem 4rem;
-  letter-spacing: 0.9rem;
-  /* background-color: rebeccapurple; */
-}
+} */
 .container-counter {
   padding: 4.5rem 9rem;
-
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   height: 50px;
   color: var(--color-secondary);
-  text-align: center;
 }
 .container-counter .counters {
   width: 100%;
+  position: absolute;
+  bottom: -2.5rem;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 25px;
-  margin-top: 0rem;
 }
 .container-counter .counters .counter {
   background: var(--color-white);
   border-radius: 20px;
-  padding: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   box-shadow: var(--box-shadow);
   transition: all 300ms ease;
 }
@@ -1205,7 +1138,7 @@ h1 {
 }
 .container-counter .counters .counter p {
   color: var(--color-priamary);
-  font-size: 16px;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
