@@ -201,7 +201,7 @@ body {
 }
 .hero-section .img {
   position: relative;
-  margin-top: -3rem;
+  margin-top: -5rem;
 }
 .text-box {
   padding: 15rem 0rem 10rem 2rem;
@@ -378,21 +378,24 @@ h5 {
 .services {
   display: flex;
   flex-direction: column;
-  padding: 0 90px;
+  padding: 4rem 9rem;
   justify-content: space-between;
 }
 .services h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  /* color: #333; */
+  color: var(--color-priamary);
   text-align: center;
   padding: 0 6rem;
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 .services span {
   font-size: 1rem;
   font-weight: bold;
-  color: #747373;
+  /* color: #747373; */
+  color: var(--color-secondary);
+  margin-top: 1rem;
   display: block;
   text-align: center;
 }
@@ -1109,29 +1112,32 @@ h5 {
   padding: 4.5rem 9rem;
   width: 100%;
   height: 50px;
+  display: flex;
   color: var(--color-secondary);
 }
 .container-counter .counters {
-  width: 100%;
+  width: 70%;
   position: absolute;
   bottom: -2.5rem;
-  display: flex;
 }
 .container-counter .counters .counter {
   background: var(--color-white);
-  border-radius: 20px;
-  padding: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-radius: 50px;
+  padding: 3rem 3rem;
+  text-wrap: nowrap;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
 
   box-shadow: var(--box-shadow);
   transition: all 300ms ease;
+  animation: to_up 1s ease;
+  animation-duration: forwards 1.3s;
 }
-.container-counter .counters .counter:hover {
+/* .container-counter .counters .counter:hover {
   box-shadow: none;
   transform: translateY(-5%);
-}
+} */
 .container-counter .counters .counter .number {
   font-size: 30px;
   font-weight: 600;
