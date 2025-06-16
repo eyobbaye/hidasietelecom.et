@@ -1036,7 +1036,89 @@ h5 {
   font-weight: 600;
   color: #444;
 }
-/* Toggle button style */
+/* Time line  */
+.tittle h1 {
+  margin: 0.3em;
+  font-size: 3rem;
+}
+.checkpoint h2 {
+  margin-bottom: 0.5em;
+}
+.tittle {
+  text-align: center;
+}
+.tittle p {
+  color: var(--color-priamary);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+.timeline {
+  margin: 5rem auto;
+  max-width: 34.15rem;
+}
+.checkpoint {
+  max-width: 34rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.checkpoint div {
+  border: 2px solid #888;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.checkpoint p {
+  line-height: 27px;
+  color: #ccc;
+}
+.checkpoint:nth-child(odd) {
+  border-left: 3px solid #888;
+  padding-left: 3rem;
+  transform: translateX(17rem);
+}
+.checkpoint:nth-child(even) {
+  border-right: 3px solid #888;
+  padding-right: 3rem;
+  transform: translateX(-16.7rem);
+}
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before {
+  content: " ";
+  background: #888;
+  width: 3em;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checkpoint:nth-child(odd)::before {
+  left: 0;
+}
+.checkpoint:nth-child(even)::before {
+  right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+  content: " ";
+  background: #fff;
+  box-shadow: 0 0 0.5em #0d71fc;
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.checkpoint:nth-child(odd) div::before {
+  left: -0.5em;
+}
+.checkpoint:nth-child(even) div::before {
+  right: -0.5em;
+}
+/* To p{
+line-height: 1.7rem;
+ggle button style */
 .menu-toggle {
   display: none;
   background: none;
