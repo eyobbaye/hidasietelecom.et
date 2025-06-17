@@ -67,7 +67,7 @@ html {
   /* scroll-timeline-name: --page-scroll; */
   /* scroll axis */
   /* scroll-timeline-axis: y; */
-  scroll-timeline: --page-scroll y;
+  /* scroll-timeline: --page-scroll y; */
 }
 body {
   overflow-x: hidden;
@@ -78,29 +78,32 @@ body {
 }
 
 /* Progress scroll Animation */
+/* Progress Bar Styles */
 .progress {
+  /* Positioning */
   position: fixed;
+  top: 0;
   left: 0;
-  top: 2rem;
   width: 100%;
-  height: 7rem;
+  height: 1rem;
+  /* Background and Color */
   background-color: var(--color-secondary);
-  transform-origin: 0 50%;
+  /* Transform and Animation */
+  transform-origin: left;
+  transform: scaleX(0);
   animation: progress linear;
-  /* specify which timeline controles the animaton */
-  animation-timeline: scroll(block);
-  z-index: 5;
-}
+  animation-timeline: scroll();
 
-/* keyframe */
+  /* Z-Index and Display */
+  z-index: 1000;
+}
+/* Progress Bar Animation Keyframes */
 @keyframes progress {
-  from {
-    transform: scaleX(0);
-  }
   to {
     transform: scaleX(1);
   }
 }
+
 .navbar {
   display: flex;
   align-items: center;
@@ -1068,7 +1071,8 @@ h5 {
   font-weight: 600;
   color: #444;
 }
-/* Time line  */
+
+/* Timeline  */
 .tittle h1 {
   margin: 0.3em;
   font-size: 3rem;
@@ -1080,7 +1084,9 @@ h5 {
   text-align: center;
 }
 .tittle p {
-  color: var(--color-priamary);
+  color: var(
+    --color-primary
+  ); /* Corrected typo: var(--color-priamary) to var(--color-primary) */
   font-size: 1.3rem;
   letter-spacing: 2px;
 }
@@ -1088,12 +1094,59 @@ h5 {
   margin: 5rem auto;
   max-width: 34.15rem;
 }
+
+/* Animations for Checkpoints */
+@keyframes fadeInSlideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20rem); /* Start further right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(17rem); /* Original position for odd */
+  }
+}
+
+@keyframes fadeInSlideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20rem); /* Start further left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-16.7rem); /* Original position for even */
+  }
+}
+
 .checkpoint {
   max-width: 34rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   position: relative;
+  opacity: 0; /* Start hidden */
+  /* Common animation properties for all checkpoints */
+  animation-fill-mode: forwards; /* Keep the end state of the animation */
+  animation-duration: 0.5s; /* Adjust duration as needed */
+  animation-timing-function: ease-out; /* Smooth animation */
+  animation-timeline: view(
+
+  ); /* Animate based on element visibility in viewport */
+  animation-range: entry 25% cover 50%; /* Adjust when animation starts/ends relative to viewport */
 }
+
+/* Specific animations for odd/even checkpoints */
+.checkpoint:nth-child(odd) {
+  border-left: 3px solid #888;
+  padding-left: 3rem;
+  animation-name: fadeInSlideInLeft;
+}
+.checkpoint:nth-child(even) {
+  border-right: 3px solid #888;
+  padding-right: 3rem;
+  animation-name: fadeInSlideInRight;
+}
+
+/* Ensure the div inside checkpoint does not inherit transform */
 .checkpoint div {
   border: 2px solid #888;
   border-radius: 1rem;
@@ -1103,16 +1156,7 @@ h5 {
   line-height: 27px;
   color: #ccc;
 }
-.checkpoint:nth-child(odd) {
-  border-left: 3px solid #888;
-  padding-left: 3rem;
-  transform: translateX(17rem);
-}
-.checkpoint:nth-child(even) {
-  border-right: 3px solid #888;
-  padding-right: 3rem;
-  transform: translateX(-16.7rem);
-}
+
 .checkpoint:nth-child(odd)::before,
 .checkpoint:nth-child(even)::before {
   content: " ";
@@ -1148,6 +1192,7 @@ h5 {
 .checkpoint:nth-child(even) div::before {
   right: -0.5em;
 }
+
 /*Time Line Responsive   */
 /*Phone  */
 @media screen and (max-width: 1150px) {
