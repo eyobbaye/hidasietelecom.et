@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Animation</title>
+    <style>
+      :root {
+        --border-radius-2: 8px; /* Example value */
+        --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Example value */
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 200px 0; /* Add padding to make scrolling possible for demonstration */
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column; /* Stack features vertically */
+        gap: 2rem; /* Space between features */
+        padding: 0 1rem;
+      }
+
+      /* Existing .feature styles */
+      .feature {
+        padding: 1rem 2rem;
+        border-radius: var(--border-radius-2);
+        box-shadow: var(--box-shadow);
+        background-color: white;
+        /* margin-left: 1rem; Removed as it might interfere with centering or overall layout, use padding/gap on parent instead if needed */
+        transition: all 0.6s ease-out; /* Increased transition duration for the animation */
+
+        /* Initial state: hidden below and transparent */
+        opacity: 0;
+        transform: translateY(50px); /* Start 50px below its final position */
+      }
+
+      /* Class added when the element is in view */
+      .feature.is-visible {
+        opacity: 1;
+        transform: translateY(0); /* Move to its final position */
+      }
+
+      /* Just for demonstrating scroll - large empty spaces */
+      .spacer {
+        height: 80vh;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spacer"></div>
+    <div class="container">
+      <div class="feature">
+        <h2>Feature 1</h2>
+        <p
+          >This is the first amazing feature of our product. It highlights a key
+          benefit for users.</p
+        >
+      </div>
+
+      <div class="feature">
+        <h2>Feature 2</h2>
+        <p
+          >Here's another fantastic feature that will streamline your workflow
+          and boost productivity.</p
+        >
+      </div>
+
+      <div class="feature">
+        <h2>Feature 3</h2>
+        <p
+          >Our third feature provides unparalleled insights, helping you make
+          informed decisions.</p
+        >
+      </div>
+
+      <div class="feature">
+        <h2>Feature 4</h2>
+        <p
+          >Discover the power of feature four, designed to simplify complex
+          tasks.</p
+        >
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const features = document.querySelectorAll(".feature");
+
+        const observerOptions = {
+          root: null, // Use the viewport as the root
+          rootMargin: "0px",
+          threshold: 0.1, // Trigger when 10% of the element is visible
+        };
+
+        const featureObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Element is in view, add the 'is-visible' class
+                entry.target.classList.add("is-visible");
+              } else {
+                // Element is out of view, remove the 'is-visible' class to reverse the animation
+                entry.target.classList.remove("is-visible");
+              }
+            });
+          },
+          observerOptions
+        );
+
+        features.forEach((feature) => {
+          featureObserver.observe(feature);
+        });
+      });
+    </script>
+  </body>
+</html>
