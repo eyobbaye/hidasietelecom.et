@@ -1003,33 +1003,48 @@ h5 {
   gap: 6rem;
 }
 .tesimonials-des {
-  background-color: wheat;
   padding: 4rem 9rem;
+  display: flex;
 }
 .tesimonials-des div {
   align-items: center;
   justify-content: center;
-  transform: translateY(50%);
+  transform: translateY(30%);
   margin-bottom: 9rem;
 }
-
+.tesimonials-des div h2 {
+  font-size: 4.2rem;
+  color: var(--color-secondary);
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.tesimonials-des div p {
+  color: var(--color-white);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+.tesimonials-des div button {
+  padding: 1rem 2rem;
+  background-color: #062c56;
+  color: var(--color-white);
+  border-radius: 1rem;
+}
 .card .tesimonials {
   display: flex;
   align-items: center;
   column-gap: 1rem;
-  border: 5px solid var(--color-dark-variant);
+  box-shadow: var(--box-shadow-1);
+  border-left: 5px solid var(--color-dark-variant);
   margin-top: 3rem;
   padding: 1rem 4rem 1rem 2rem;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   transition: all 0.3s ease;
 }
-.card .tesimonials:hover {
+.tesimonials-hover {
   border-left: 5px solid var(--color-secondary);
   transform: translateX(-7rem);
 }
-.card .tesimonials:hover:nth-child(2) {
-  transform: translateX(7rem);
-}
+
 .card .tesimonials:nth-child(2) {
   transform: translateX(-7rem);
 }
@@ -1042,6 +1057,7 @@ h5 {
   align-items: center;
 }
 .card .tesimonials .text-des h3 {
+  color: var(--color-secondary);
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
