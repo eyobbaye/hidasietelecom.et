@@ -90,3 +90,183 @@
     margin-left: 0;
   }
 }
+
+/* footer */
+* --- Media Queries for Responsiveness --- */
+
+/* For screens smaller than 1024px (e.g., tablets) */
+@media (max-width: 1024px) {
+  .main-footer {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    padding: 3rem 4rem; /* Adjust padding */
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+  }
+
+  .main-footer .logo {
+    grid-column: span 2; /* Logo takes full width on this breakpoint */
+  }
+
+  .subscribe {
+    margin-top: 3rem;
+    margin-left: 0;
+    justify-content: center; /* Center content */
+  }
+
+  .social-link {
+    margin-left: 0;
+    align-items: center; /* Center social links */
+    text-align: center;
+  }
+
+  .footer-about-us {
+    padding: 2rem;
+  }
+
+  .footer-link {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* For screens smaller than 768px (e.g., larger phones) */
+@media (max-width: 768px) {
+  .main-footer {
+    grid-template-columns: 1fr; /* Single column layout */
+    padding: 2rem 2rem; /* Further reduce padding */
+    row-gap: 2.5rem;
+  }
+
+  .main-footer .logo {
+    grid-column: span 1; /* Reset for single column */
+  }
+
+  .footer-container {
+    min-height: auto; /* Allow height to adjust based on content */
+  }
+
+  .subscribe {
+    flex-direction: column; /* Stack input and button vertically */
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+
+  .subscribe input {
+    border-radius: 5rem; /* Full border-radius for input when stacked */
+    border-bottom-left-radius: 0; /* Keep top-left for input */
+    border-bottom-right-radius: 0;
+    margin-bottom: 0.5rem; /* Add some space between input and button */
+    width: 100%; /* Make input take full width */
+    max-width: 350px; /* Limit max-width */
+  }
+
+  .subscribe .subscribe-link {
+    border-radius: 5rem; /* Full border-radius for button when stacked */
+    border-top-left-radius: 0; /* Keep bottom-right for button */
+    border-top-right-radius: 0;
+    width: 100%; /* Make button take full width */
+    max-width: 350px; /* Limit max-width */
+    text-align: center; /* Center button text */
+    padding: 1.5rem 1rem; /* Adjust padding */
+  }
+
+  .social-link {
+    align-items: center; /* Center content */
+    margin-left: 0;
+    gap: 1.5rem;
+  }
+
+  .footer-about-us {
+    padding: 1.5rem;
+    text-align: center; /* Center text */
+  }
+
+  .footer-about-us h2 {
+    font-size: 2.2rem;
+  }
+
+  .footer-about-us p {
+    font-size: 1.5rem;
+  }
+
+  .footer-link {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center; /* Center text for links */
+  }
+
+  .footer-link a {
+    justify-content: center; /* Center link content */
+    font-size: 1.3rem;
+  }
+
+  .footer-link h2 {
+    font-size: 20px;
+  }
+
+  .footer-link h3 {
+    font-size: 1.5rem;
+  }
+
+  .copy-right p {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+}
+
+/* For screens smaller than 480px (e.g., small phones) */
+@media (max-width: 480px) {
+  .main-footer {
+    padding: 1.5rem 1rem;
+    row-gap: 2rem;
+  }
+
+  .main-footer .logo img {
+    width: 80%; /* Adjust logo size */
+    max-width: 150px;
+  }
+
+  .main-footer .logo p {
+    font-size: 1.6rem;
+  }
+
+  .subscribe input,
+  .subscribe .subscribe-link {
+    font-size: 1.4rem;
+    padding: 1.2rem 0.8rem;
+    max-width: 90%; /* Limit width more for very small screens */
+  }
+
+  .social-link img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .social-link h2 {
+    font-size: 20px;
+  }
+
+  .footer-about-us h2 {
+    font-size: 2rem;
+  }
+
+  .footer-about-us p {
+    font-size: 1.4rem;
+  }
+
+  .footer-link a {
+    font-size: 1.2rem;
+  }
+
+  .footer-link h2 {
+    font-size: 18px;
+  }
+
+  .footer-link h3 {
+    font-size: 1.4rem;
+  }
+
+  .copy-right p {
+    font-size: 1.4rem;
+  }
+}
