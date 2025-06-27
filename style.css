@@ -573,6 +573,9 @@ h5 {
 }
 .card {
   position: relative;
+  animation: appear 0.3s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
 }
 .cardImg {
   background-color: var(--color-white);
@@ -655,6 +658,9 @@ h5 {
   font-weight: 600;
   margin-bottom: 1.9rem;
   padding-top: 1.5rem;
+  animation: to_up 0.3s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
 }
 .about-us-heading {
   font-size: 3.5rem;
@@ -664,11 +670,17 @@ h5 {
   color: var(--color-priamary);
   border-bottom: 0.5rem solid var(--color-secondary);
   border-style: solid;
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
 }
 .about-us-text {
   font-size: 1.6rem;
   line-height: 2.2rem;
   padding-right: 6rem;
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 25% cover 65%;
 }
 .our-vision-and-goal .our-vision,
 .our-goal {
@@ -694,6 +706,9 @@ h5 {
   border-radius: 2.3rem;
   background-color: var(--color-priamary);
   margin: 3rem 0rem 3rem 0rem;
+  animation: appear 0.3s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
 }
 .our-vision-icon,
 .our-goal-icon,
@@ -705,6 +720,12 @@ h5 {
   padding: 0.8rem;
   border-radius: 50%;
   margin-bottom: 1.3rem;
+}
+.our-vision,
+.our-goal {
+  animation: to_up 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
 }
 .our-vision-title,
 .our-goal-title {
@@ -736,11 +757,16 @@ h5 {
   border-radius: 2rem;
   box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in;
+  animation: to_up 0.3s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
 }
 .contact-us-link:hover {
   background-color: var(--color-white);
   color: var(--color-priamary);
 }
+
+/* SECTION LANDSCAPE */
 .section-landscape {
   position: relative;
 }
@@ -767,6 +793,9 @@ h5 {
   font-size: 2.4rem;
   color: var(--color-priamary);
   font-weight: 600;
+  animation: to_up 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 55%;
 }
 .heading-button {
   background-color: var(--color-priamary);
@@ -779,6 +808,9 @@ h5 {
   box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.3s all;
+  animation: to_up 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 55%;
 }
 .heading-button:hover {
   background-color: #234d7c;
@@ -813,6 +845,9 @@ h5 {
 .des-card {
   padding: 1rem 1.3rem;
   position: relative;
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 45%;
 }
 .des-card::after {
   content: "";
@@ -1005,6 +1040,9 @@ h5 {
 .tesimonials-des {
   padding: 4rem 9rem;
   display: flex;
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 45%;
 }
 .tesimonials-des div {
   align-items: center;
@@ -1029,7 +1067,7 @@ h5 {
   color: var(--color-white);
   border-radius: 1rem;
 }
-.card .tesimonials {
+.tesimonials {
   display: flex;
   align-items: center;
   column-gap: 1rem;
@@ -1037,8 +1075,10 @@ h5 {
   border-left: 5px solid var(--color-dark-variant);
   margin-top: 3rem;
   padding: 1rem 4rem 1rem 2rem;
-  /* border-radius: 1rem; */
   transition: all 0.3s ease;
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 15% cover 45%;
 }
 .tesimonials-hover {
   border-left: 5px solid var(--color-secondary);
@@ -1216,6 +1256,9 @@ h5 {
   margin-top: -2rem;
   row-gap: 2rem;
   padding: 1rem 0rem;
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 25% cover 65%;
 }
 .icons span {
   color: var(--color-secondary);
