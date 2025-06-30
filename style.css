@@ -335,11 +335,47 @@ h5 {
   color: var(--color-priamary);
   box-shadow: 0 0 15px var(--color-priamary);
 }
-.img .laptop {
-  width: 100%;
-  max-width: 600px;
+.img .hidasie-service {
+  width: 110%;
+  /* max-width: 600px; */
   animation: to_left 1s ease forwards 1.5s;
   opacity: 0;
+}
+/* Count Number Section */
+.container-counter {
+  padding: 4.5rem 9rem;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  color: var(--color-secondary);
+}
+.container-counter .counters {
+  width: 70%;
+  position: absolute;
+  bottom: -2.5rem;
+}
+.container-counter .counters .counter {
+  background: var(--color-white);
+  border-radius: 50px;
+  padding: 1.5rem 3rem;
+  text-wrap: nowrap;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+  animation: to_up 1s ease;
+  animation-duration: forwards 1.3s;
+}
+.container-counter .counters .counter .number {
+  font-size: 30px;
+  font-weight: 600;
+}
+.container-counter .counters .counter p {
+  color: var(--color-priamary);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 @keyframes to_bottom {
   0% {
@@ -1184,42 +1220,7 @@ h5 {
   margin-top: 2rem;
 }
 /* TEstionials Sectio END */
-/* Count Number Section */
-.container-counter {
-  padding: 4.5rem 9rem;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  color: var(--color-secondary);
-}
-.container-counter .counters {
-  width: 70%;
-  position: absolute;
-  bottom: -2.5rem;
-}
-.container-counter .counters .counter {
-  background: var(--color-white);
-  border-radius: 50px;
-  padding: 1.5rem 3rem;
-  text-wrap: nowrap;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(4, 1fr);
 
-  box-shadow: var(--box-shadow);
-  transition: all 300ms ease;
-  animation: to_up 1s ease;
-  animation-duration: forwards 1.3s;
-}
-.container-counter .counters .counter .number {
-  font-size: 30px;
-  font-weight: 600;
-}
-.container-counter .counters .counter p {
-  color: var(--color-priamary);
-  font-size: 1.2rem;
-  font-weight: 600;
-}
 /* CHOICE US  section */
 .choice-us {
   overflow: hidden;
