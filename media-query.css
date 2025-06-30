@@ -91,101 +91,254 @@
   }
 }
 
-/* Hero Section */
-@media (max-width: 1024px) {
-  .hero-section {
-    height: 35vh;
-  }
-  .hero-section .img {
-    margin-top: -5rem;
-  }
-  .hero-section .text-box {
-    margin-top: 0rem;
-  }
-  .text-box h1 {
-    font-size: 3.6rem;
-  }
+.hero-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically on small screens */
+  gap: 2rem; /* Spacing between elements */
+  height: 40vh; /* Default height for mobile */
+  padding: 2.25rem 4rem 0rem 4rem; /* Default padding for mobile */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
 }
-@media (max-width: 768px) {
-  .hero-section {
-    height: 35vh;
-    padding: 4.5rem 9rem;
-  }
-  .hero-section .img {
-    margin-top: -5rem;
-    width: 100%;
-  }
-  .hero-section .text-box {
-    margin-top: 0;
-  }
-  .text-box h1 {
-    font-size: 2.6rem;
-  }
-  .btn-box .btn {
-    font-size: 1.2rem;
-  }
-  .container-counter {
-    padding: 4.5rem 0rem;
-    font-size: 2.8rem;
-  }
-  .container-counter .counters {
-    width: 80%;
-  }
-  .container-counter .counters .counter p {
-    font-size: 1rem;
-    text-align: center;
-  }
+
+.hero-section .img {
+  margin-top: -20rem; /* Adjust image margin for mobile */
+  width: 100%; /* Ensure image is responsive */
 }
-@media (max-width: 480px) {
+
+.hero-section .img .hidasie-service {
+  width: 80%; /* Smaller image width on mobile */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.hero-section .text-box {
+  margin-top: 2rem; /* Adjust text box margin for mobile */
+}
+
+.text-box h1 {
+  margin-top: -10rem; /* Adjust heading margin for mobile */
+  font-size: 1.4rem; /* Smaller font size for mobile heading */
+}
+
+.text-box p {
+  margin-top: 0.5rem; /* Adjust paragraph margin */
+  font-size: 1.2rem; /* Smaller font size for mobile paragraph */
+  margin-bottom: 5rem; /* Adjust paragraph bottom margin */
+}
+
+.btn-box {
+  margin-top: -2rem; /* Adjust button box margin */
+  display: flex; /* Use flexbox for buttons */
+  flex-direction: row; /* Buttons side-by-side on mobile */
+  gap: 1rem; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+}
+
+.btn-box .btn,
+.btn-box .icon-btn {
+  font-size: 1rem; /* Smaller font size for buttons on mobile */
+  padding: 0.8rem 1.5rem; /* Adjust button padding */
+  border-radius: 50px; /* Rounded corners for buttons */
+}
+
+.container-counter {
+  padding: 2.1rem 0rem; /* Adjust counter section padding */
+  font-size: 1rem; /* Base font size for counter section */
+  height: 2.5rem; /* Adjust height */
+  display: flex; /* Use flexbox for counter container */
+  justify-content: center; /* Center counters horizontally */
+  align-items: center; /* Center counters vertically */
+  width: 100%; /* Full width */
+}
+
+.container-counter .counters {
+  display: flex; /* Use flexbox for individual counters */
+  flex-wrap: wrap; /* Allow counters to wrap on smaller screens */
+  gap: 1rem; /* Space between counters */
+  justify-content: center; /* Center counters within their container */
+  width: 100%; /* Full width for counter group */
+}
+
+.container-counter .counters .counter {
+  width: 100%; /* Each counter takes full width on mobile */
+  text-align: center; /* Center text within counter */
+}
+
+.container-counter .counters .counter .number {
+  font-size: 2rem; /* Smaller number size on mobile */
+  font-weight: bold; /* Make numbers stand out */
+}
+
+.container-counter .counters .counter p {
+  font-size: 0.6rem; /* Smaller text for counter descriptions on mobile */
+  width: 50%; /* Limit paragraph width */
+  margin: 0 auto; /* Center paragraph within its container */
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Media query for tablets (screens > 480px and <= 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
   .hero-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    height: 40vh;
-    padding: 2.25rem 4rem 0rem 4rem;
+    height: 35vh; /* Adjust height for tablets */
+    padding: 4.5rem 9rem; /* Adjust padding for tablets */
+    flex-direction: row; /* Arrange elements side-by-side */
+    justify-content: space-around; /* Distribute space */
+    align-items: center;
   }
+
   .hero-section .img {
-    margin-top: -20rem;
+    margin-top: -5rem; /* Adjust image margin */
+    width: 50%; /* Image takes half width */
   }
+
   .hero-section .img .hidasie-service {
-    width: 80%;
+    width: 100%; /* Image fills its container */
   }
+
   .hero-section .text-box {
-    margin-top: 2rem;
+    margin-top: 0; /* Reset text box margin */
+    width: 50%; /* Text box takes half width */
+    text-align: left; /* Align text to left */
   }
+
   .text-box h1 {
-    margin-top: -10rem;
-    font-size: 1.4rem;
+    font-size: 2.6rem; /* Adjust heading font size */
+    margin-top: 0; /* Reset heading margin */
   }
+
   .text-box p {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-    margin-bottom: 5rem;
+    font-size: 1.2rem; /* Adjust paragraph font size */
+    margin-bottom: 2rem; /* Adjust paragraph bottom margin */
   }
+
   .btn-box {
-    margin-top: -2rem;
-    flex-direction: row;
+    margin-top: 0; /* Reset button box margin */
+    justify-content: flex-start; /* Align buttons to the start */
   }
+
   .btn-box .btn,
   .btn-box .icon-btn {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Adjust button font size */
   }
+
   .container-counter {
-    padding: 2.1rem 0rem;
-    font-size: 1rem;
-    height: 2.5rem;
+    padding: 4.5rem 0rem; /* Adjust counter section padding */
+    font-size: 2.8rem; /* Adjust base font size for counters */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .container-counter .counters {
+    width: 80%; /* Counters take 80% width */
   }
 
   .container-counter .counters .counter {
+    width: auto; /* Allow counters to size naturally */
+    flex: 1; /* Distribute space equally */
+  }
+
+  .container-counter .counters .counter .number {
+    font-size: 2.8rem; /* Adjust number size */
+  }
+
+  .container-counter .counters .counter p {
+    font-size: 1rem; /* Adjust text size for counter descriptions */
+    width: auto; /* Allow paragraph to size naturally */
+  }
+}
+
+/* Media query for desktops (screens > 768px and <= 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-section {
+    height: 35vh; /* Adjust height for desktops */
+    flex-direction: row; /* Elements side-by-side */
+    justify-content: space-around;
+    align-items: center;
+    padding: 4.5rem 9rem; /* Keep padding consistent or adjust */
+  }
+
+  .hero-section .img {
+    margin-top: -5rem; /* Adjust image margin */
+    width: 40%; /* Image takes less width on larger screens */
+  }
+
+  .hero-section .text-box {
+    margin-top: 0rem; /* Reset text box margin */
+    width: 50%; /* Text box takes more width */
+    text-align: left;
+  }
+
+  .text-box h1 {
+    font-size: 3.6rem; /* Adjust heading font size */
+  }
+
+  /* No specific changes for p, btn-box, btn, icon-btn from tablet size */
+  /* If needed, add more specific adjustments here */
+}
+
+/* Media query for large desktops (screens > 1024px) */
+@media (min-width: 1025px) {
+  .hero-section {
+    height: 60vh; /* Full height for large screens */
+    padding: 6rem 12rem; /* Larger padding for large screens */
+    flex-direction: row; /* Elements side-by-side */
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .hero-section .img {
+    margin-top: 0; /* Reset image margin */
+    width: 35%; /* Adjust image width */
+  }
+
+  .hero-section .img .hidasie-service {
     width: 100%;
   }
-  .container-counter .counters .counter .number {
-    font-size: 2rem;
+
+  .hero-section .text-box {
+    margin-top: 0;
+    width: 55%; /* Adjust text box width */
+    text-align: left;
   }
+
+  .text-box h1 {
+    font-size: 4.8rem; /* Larger font size for main heading */
+    margin-bottom: 1.5rem; /* Add some space below heading */
+  }
+
+  .text-box p {
+    font-size: 1.5rem; /* Larger font size for paragraph */
+    margin-bottom: 3rem;
+  }
+
+  .btn-box {
+    justify-content: flex-start; /* Align buttons to start */
+  }
+
+  .btn-box .btn,
+  .btn-box .icon-btn {
+    font-size: 1.3rem; /* Larger font size for buttons */
+    padding: 1rem 2rem;
+    border-radius: 50px;
+  }
+
+  .container-counter {
+    padding: 6rem 4.5rem; /* Larger padding for counter section */
+    font-size: 3.5rem; /* Larger base font size */
+  }
+
+  .container-counter .counters {
+    width: 50%; /* Narrower counter section for large screens */
+  }
+
+  .container-counter .counters .counter .number {
+    font-size: 3.5rem; /* Adjust number size */
+  }
+
   .container-counter .counters .counter p {
-    font-size: 0.6rem;
-    width: 50%;
-    text-align: center;
+    font-size: 1.2rem; /* Adjust text size for counter descriptions */
   }
 }
 
@@ -317,6 +470,66 @@
   .copy-right p {
     font-size: 1.5rem;
     padding: 0.5rem;
+  }
+}
+/* Service Section */
+/* Base styles - Mobile-first approach */
+.services {
+  padding: 1rem; /* Start with a base padding, can be adjusted for smaller screens if needed */
+}
+
+.services .container h1 {
+  font-size: 2rem; /* A good base size for mobile */
+  padding: 2rem 0; /* Adjust padding as a base */
+  margin: 1rem; /* Adjust margin as a base */
+  text-align: center; /* Often good for titles on mobile */
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to a single column for smaller screens */
+  gap: 1.5rem; /* Add some spacing between grid items */
+}
+
+.feature {
+  margin: 0; /* Remove specific margin on feature for mobile, let gap handle it */
+  padding: 1rem; /* Add some internal padding to features */
+  /* Add other base feature styles here like border, box-shadow etc. */
+}
+
+/* --- */
+
+/* Tablet and larger screens */
+@media (min-width: 481px) {
+  .services {
+    padding: 2rem; /* Increase padding for larger screens */
+  }
+
+  .services .container h1 {
+    font-size: 2.2rem; /* Slightly larger heading for tablets */
+    padding: 3rem 0;
+    margin: 2rem;
+  }
+
+  .services .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  /* Specific rule for the first feature on tablets, if it needs to span rows */
+  .services .grid .feature:nth-child(1) {
+    grid-row: span 2;
+  }
+}
+/* Desktop and larger screens */
+@media (min-width: 769px) {
+  .services .container h1 {
+    font-size: 2.8rem; /* Even larger heading for desktops */
+  }
+  .services .grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+  }
+  .services .grid .feature:nth-child(1) {
+    grid-row: auto; /* Reset grid-row for larger screens if not needed */
   }
 }
 
