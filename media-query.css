@@ -520,18 +520,96 @@
     grid-row: span 2;
   }
 }
+
 /* Desktop and larger screens */
 @media (min-width: 769px) {
   .services .container h1 {
     font-size: 2.8rem; /* Even larger heading for desktops */
   }
+
   .services .grid {
     grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
   }
+
   .services .grid .feature:nth-child(1) {
-    grid-row: auto; /* Reset grid-row for larger screens if not needed */
+    grid-row: span 3; /* Reset grid-row for larger screens if not needed */
   }
 }
+
+/* --- */
+
+/* Even larger desktops (optional) */
+@media (min-width: 1025px) {
+  .services .container h1 {
+    font-size: 3.2rem; /* Max font size for very large screens */
+  }
+  .services {
+    padding: 4rem 0; /* More padding for very large screens */
+  }
+}
+/* SETION STAND */
+
+@media (max-width: 480px) {
+  .section-stand {
+    padding: 4rem 1rem;
+  }
+  .stand {
+    padding: 1.5rem 0rem;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .stand .stand-text-box {
+    padding: 2rem;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2rem;
+  }
+  .stand-text-box .heading-secondary {
+    font-size: 2rem;
+  }
+  .stand-text-box .stand-text {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    line-height: 2;
+  }
+  .stand .stand-img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    min-height: 35rem;
+  }
+  .stand .stand-img img {
+    width: 80%;
+    height: 45rem;
+    margin-left: -15rem;
+    top: 20.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-stand {
+    padding: 4rem 1rem;
+  }
+  .stand {
+    grid-template-columns: 2fr 1fr;
+  }
+  .stand-text-box .heading-secondary {
+    font-size: 2.6rem;
+  }
+  .stand-text-box .stand-text {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    line-height: 2;
+  }
+  .stand-img img {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+}
+
+/* footer */
 
 /* For screens smaller than 480px (e.g., small phones) */
 @media (max-width: 480px) {
