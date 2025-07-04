@@ -90,14 +90,142 @@
     margin-left: 0;
   }
 }
+/* Extra small devices (phones)*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .hero-section {
+    padding: 1rem 0rem;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 2rem 0 2rem;
+  }
+  .rated .text-rate {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  .btn-box .btn {
+    font-size: 0.8rem;
+  }
+  .text-box h1 {
+    font-size: 2.2rem; /* Adjust heading size for small screens */
+  }
+  .text-box p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  .text-box .btn-box {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .img .hidasie-service {
+    margin: 0 auto;
+  }
+  .counters {
+    grid-column: auto;
+    margin: 0 auto;
+    gap: 0.5rem;
+    padding: 1rem 2rem 0rem 2rem;
+  }
+  .counters .counter .number {
+    font-size: 2rem;
+  }
+  .counters .counter .details {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (ipad and tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .hero-section {
+    padding: 1rem 0rem;
+  }
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 2rem 0 2rem;
+  }
+  .rated .text-rate {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  .btn-box .btn {
+    font-size: 0.8rem;
+  }
+  .text-box h1 {
+    font-size: 2.2rem; /* Adjust heading size for small screens */
+  }
+  .text-box p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  .text-box .btn-box {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .img .hidasie-service {
+    margin: 0 auto;
+  }
+  .counters {
+    /* grid-column: auto; */
+    margin: 0 auto;
+    gap: 0.5rem;
+    padding: 1rem 2rem 0rem 2rem;
+  }
+  .counters .counter .number {
+    font-size: 2rem;
+  }
+  .counters .counter .details {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices small screen laptops*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    gap: 12rem;
+    padding: 1rem 3rem;
+  }
+
+  .text-box h1 {
+    font-size: 3.6rem; /* Adjust heading size for small screens */
+  }
+  .text-box p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  .text-box .btn-box {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .img .hidasie-service {
+    margin-top: -3rem;
+  }
+  .container-counter {
+    margin: 4rem 9rem;
+    width: 100%;
+    margin-left: -5rem;
+  }
+  .container-counter .counters .counter {
+    padding: 1rem 2rem;
+    gap: 1rem;
+    text-wrap: wrap;
+  }
+  .container-counter .counters .counter .number {
+    font-size: 2rem;
+  }
+  .container-counter .counters .counter p {
+    font-size: 1rem;
+  }
+}
 
 /* footer */
-* --- Media Queries for Responsiveness --- */
+/* --- Media Queries for Responsiveness --- */
 
 /* For screens smaller than 1024px (e.g., tablets) */
 @media (max-width: 1024px) {
   .main-footer {
-    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
     padding: 3rem 4rem; /* Adjust padding */
     column-gap: 1.5rem;
     row-gap: 3rem;
@@ -105,40 +233,45 @@
 
   .main-footer .logo {
     grid-column: span 2; /* Logo takes full width on this breakpoint */
+    /* padding: 0; */
   }
 
   .subscribe {
     margin-top: 3rem;
-    margin-left: 0;
+    margin-left: 3rem;
     justify-content: center; /* Center content */
   }
 
   .social-link {
-    margin-left: 0;
+    margin-left: 0rem;
     align-items: center; /* Center social links */
     text-align: center;
   }
 
   .footer-about-us {
-    padding: 2rem;
+    padding: 3rem;
   }
 
   .footer-link {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
 /* For screens smaller than 768px (e.g., larger phones) */
 @media (max-width: 768px) {
   .main-footer {
-    grid-template-columns: 1fr; /* Single column layout */
+    grid-template-columns: repeat(2, 1fr); /* Single column layout */
     padding: 2rem 2rem; /* Further reduce padding */
     row-gap: 2.5rem;
   }
 
   .main-footer .logo {
-    grid-column: span 1; /* Reset for single column */
+    grid-column: span 2; /* Reset for single column */
+  }
+  .main-footer .logo img {
+    width: 80%; /* Adjust logo size */
+    max-width: 150px;
   }
 
   .footer-container {
@@ -146,34 +279,37 @@
   }
 
   .subscribe {
-    flex-direction: column; /* Stack input and button vertically */
-    margin-top: 2rem;
-    margin-left: 0;
+    display: flex;
+    margin-top: 3rem;
+    margin-left: 3rem;
   }
 
   .subscribe input {
     border-radius: 5rem; /* Full border-radius for input when stacked */
-    border-bottom-left-radius: 0; /* Keep top-left for input */
+    border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    padding: 1.5rem 3rem; /* Adjust padding */
     margin-bottom: 0.5rem; /* Add some space between input and button */
-    width: 100%; /* Make input take full width */
+    width: 70%; /* Make input take full width */
     max-width: 350px; /* Limit max-width */
   }
 
   .subscribe .subscribe-link {
     border-radius: 5rem; /* Full border-radius for button when stacked */
-    border-top-left-radius: 0; /* Keep bottom-right for button */
-    border-top-right-radius: 0;
-    width: 100%; /* Make button take full width */
-    max-width: 350px; /* Limit max-width */
+    font-size: 0.8rem;
+    border-top-left-radius: 0rem;
+    border-bottom-left-radius: 0rem;
+    width: 30%; /* Make button take  width */
     text-align: center; /* Center button text */
-    padding: 1.5rem 1rem; /* Adjust padding */
   }
 
   .social-link {
     align-items: center; /* Center content */
     margin-left: 0;
     gap: 1.5rem;
+  }
+  .social-link h2 {
+    margin-bottom: 1.2rem;
   }
 
   .footer-about-us {
@@ -213,10 +349,151 @@
     padding: 0.5rem;
   }
 }
+/* Service Section */
+/* Base styles - Mobile-first approach */
+.services {
+  padding: 1rem; /* Start with a base padding, can be adjusted for smaller screens if needed */
+}
+
+.services .container h1 {
+  font-size: 2rem; /* A good base size for mobile */
+  padding: 2rem 0; /* Adjust padding as a base */
+  margin: 1rem; /* Adjust margin as a base */
+  text-align: center; /* Often good for titles on mobile */
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to a single column for smaller screens */
+  gap: 1.5rem; /* Add some spacing between grid items */
+}
+
+.feature {
+  margin: 0; /* Remove specific margin on feature for mobile, let gap handle it */
+  padding: 1rem; /* Add some internal padding to features */
+  /* Add other base feature styles here like border, box-shadow etc. */
+}
+
+/* --- */
+
+/* Tablet and larger screens */
+@media (min-width: 481px) {
+  .services {
+    padding: 2rem; /* Increase padding for larger screens */
+  }
+
+  .services .container h1 {
+    font-size: 2.2rem; /* Slightly larger heading for tablets */
+    padding: 3rem 0;
+    margin: 2rem;
+  }
+
+  .services .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  /* Specific rule for the first feature on tablets, if it needs to span rows */
+  .services .grid .feature:nth-child(1) {
+    grid-row: span 2;
+  }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 769px) {
+  .services .container h1 {
+    font-size: 2.8rem; /* Even larger heading for desktops */
+  }
+
+  .services .grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+  }
+
+  .services .grid .feature:nth-child(1) {
+    grid-row: span 3; /* Reset grid-row for larger screens if not needed */
+  }
+}
+
+/* --- */
+
+/* Even larger desktops (optional) */
+@media (min-width: 1025px) {
+  .services .container h1 {
+    font-size: 3.2rem; /* Max font size for very large screens */
+  }
+  .services {
+    padding: 4rem 0; /* More padding for very large screens */
+  }
+}
+/* SETION STAND */
+
+@media (max-width: 480px) {
+  .section-stand {
+    padding: 4rem 1rem;
+  }
+  .stand {
+    display: block;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .stand .stand-text-box {
+    padding: 2rem;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2rem;
+  }
+  .stand-text-box .heading-secondary {
+    font-size: 2rem;
+  }
+  .stand-text-box .stand-text {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    line-height: 2;
+  }
+  .stand .stand-img {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+    min-height: 35rem;
+  }
+  .stand .stand-img img {
+    width: 80%;
+    height: 45rem;
+    margin-left: -15rem;
+    top: 20.9rem;
+  }
+}
+@media (max-width: 768px) {
+  .section-stand {
+    padding: 4rem 1rem;
+  }
+  .stand {
+    grid-template-columns: 2fr 1fr;
+  }
+  .stand-text-box .heading-secondary {
+    font-size: 2.6rem;
+  }
+  .stand-text-box .stand-text {
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    line-height: 2;
+  }
+  .stand-img img {
+    margin-left: -15rem;
+  }
+}
+@media (max-width: 1024px) {
+}
+
+/* footer */
 
 /* For screens smaller than 480px (e.g., small phones) */
 @media (max-width: 480px) {
   .main-footer {
+    display: flex; /* Single column layout */
+    flex-direction: column;
     padding: 1.5rem 1rem;
     row-gap: 2rem;
   }
@@ -232,9 +509,12 @@
 
   .subscribe input,
   .subscribe .subscribe-link {
-    font-size: 1.4rem;
+    /* font-size: 1rem; */
     padding: 1.2rem 0.8rem;
     max-width: 90%; /* Limit width more for very small screens */
+  }
+  .main-footer .subscribe-link {
+    padding: 1.85rem 0rem;
   }
 
   .social-link img {
