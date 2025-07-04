@@ -90,255 +90,132 @@
     margin-left: 0;
   }
 }
-
-.hero-section {
-  display: flex;
-  flex-direction: column; /* Stack elements vertically on small screens */
-  gap: 2rem; /* Spacing between elements */
-  height: 40vh; /* Default height for mobile */
-  padding: 2.25rem 4rem 0rem 4rem; /* Default padding for mobile */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
-}
-
-.hero-section .img {
-  margin-top: -20rem; /* Adjust image margin for mobile */
-  width: 100%; /* Ensure image is responsive */
-}
-
-.hero-section .img .hidasie-service {
-  width: 80%; /* Smaller image width on mobile */
-  max-width: 100%; /* Ensure it doesn't overflow */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.hero-section .text-box {
-  margin-top: 2rem; /* Adjust text box margin for mobile */
-}
-
-.text-box h1 {
-  margin-top: -10rem; /* Adjust heading margin for mobile */
-  font-size: 1.4rem; /* Smaller font size for mobile heading */
-}
-
-.text-box p {
-  margin-top: 0.5rem; /* Adjust paragraph margin */
-  font-size: 1.2rem; /* Smaller font size for mobile paragraph */
-  margin-bottom: 5rem; /* Adjust paragraph bottom margin */
-}
-
-.btn-box {
-  margin-top: -2rem; /* Adjust button box margin */
-  display: flex; /* Use flexbox for buttons */
-  flex-direction: row; /* Buttons side-by-side on mobile */
-  gap: 1rem; /* Space between buttons */
-  justify-content: center; /* Center buttons horizontally */
-  align-items: center; /* Center buttons vertically */
-}
-
-.btn-box .btn,
-.btn-box .icon-btn {
-  font-size: 1rem; /* Smaller font size for buttons on mobile */
-  padding: 0.8rem 1.5rem; /* Adjust button padding */
-  border-radius: 50px; /* Rounded corners for buttons */
-}
-
-.container-counter {
-  padding: 2.1rem 0rem; /* Adjust counter section padding */
-  font-size: 1rem; /* Base font size for counter section */
-  height: 2.5rem; /* Adjust height */
-  display: flex; /* Use flexbox for counter container */
-  justify-content: center; /* Center counters horizontally */
-  align-items: center; /* Center counters vertically */
-  width: 100%; /* Full width */
-}
-
-.container-counter .counters {
-  display: flex; /* Use flexbox for individual counters */
-  flex-wrap: wrap; /* Allow counters to wrap on smaller screens */
-  gap: 1rem; /* Space between counters */
-  justify-content: center; /* Center counters within their container */
-  width: 100%; /* Full width for counter group */
-}
-
-.container-counter .counters .counter {
-  width: 100%; /* Each counter takes full width on mobile */
-  text-align: center; /* Center text within counter */
-}
-
-.container-counter .counters .counter .number {
-  font-size: 2rem; /* Smaller number size on mobile */
-  font-weight: bold; /* Make numbers stand out */
-}
-
-.container-counter .counters .counter p {
-  font-size: 0.6rem; /* Smaller text for counter descriptions on mobile */
-  width: 50%; /* Limit paragraph width */
-  margin: 0 auto; /* Center paragraph within its container */
-  text-align: center; /* Ensure text is centered */
-}
-
-/* Media query for tablets (screens > 480px and <= 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
+/* Extra small devices (phones)*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .hero-section {
-    height: 35vh; /* Adjust height for tablets */
-    padding: 4.5rem 9rem; /* Adjust padding for tablets */
-    flex-direction: row; /* Arrange elements side-by-side */
-    justify-content: space-around; /* Distribute space */
-    align-items: center;
+    padding: 1rem 0rem;
   }
-
-  .hero-section .img {
-    margin-top: -5rem; /* Adjust image margin */
-    width: 50%; /* Image takes half width */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2.5rem 2rem 0 2rem;
   }
-
-  .hero-section .img .hidasie-service {
-    width: 100%; /* Image fills its container */
+  .rated .text-rate {
+    font-size: 0.8rem;
+    padding: 1rem;
   }
-
-  .hero-section .text-box {
-    margin-top: 0; /* Reset text box margin */
-    width: 50%; /* Text box takes half width */
-    text-align: left; /* Align text to left */
+  .btn-box .btn {
+    font-size: 0.8rem;
   }
-
   .text-box h1 {
-    font-size: 2.6rem; /* Adjust heading font size */
-    margin-top: 0; /* Reset heading margin */
+    font-size: 2.2rem; /* Adjust heading size for small screens */
   }
-
   .text-box p {
-    font-size: 1.2rem; /* Adjust paragraph font size */
-    margin-bottom: 2rem; /* Adjust paragraph bottom margin */
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
-
-  .btn-box {
-    margin-top: 0; /* Reset button box margin */
-    justify-content: flex-start; /* Align buttons to the start */
+  .text-box .btn-box {
+    justify-content: center;
+    margin-top: 1rem;
   }
-
-  .btn-box .btn,
-  .btn-box .icon-btn {
-    font-size: 1.2rem; /* Adjust button font size */
+  .img .hidasie-service {
+    margin: 0 auto;
   }
-
-  .container-counter {
-    padding: 4.5rem 0rem; /* Adjust counter section padding */
-    font-size: 2.8rem; /* Adjust base font size for counters */
-    height: auto; /* Allow height to adjust */
+  .counters {
+    grid-column: auto;
+    margin: 0 auto;
+    gap: 0.5rem;
+    padding: 1rem 2rem 0rem 2rem;
   }
-
-  .container-counter .counters {
-    width: 80%; /* Counters take 80% width */
+  .counters .counter .number {
+    font-size: 2rem;
   }
-
-  .container-counter .counters .counter {
-    width: auto; /* Allow counters to size naturally */
-    flex: 1; /* Distribute space equally */
-  }
-
-  .container-counter .counters .counter .number {
-    font-size: 2.8rem; /* Adjust number size */
-  }
-
-  .container-counter .counters .counter p {
-    font-size: 1rem; /* Adjust text size for counter descriptions */
-    width: auto; /* Allow paragraph to size naturally */
+  .counters .counter .details {
+    font-size: 1rem;
   }
 }
 
-/* Media query for desktops (screens > 768px and <= 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
+/* Small devices (ipad and tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .hero-section {
-    height: 35vh; /* Adjust height for desktops */
-    flex-direction: row; /* Elements side-by-side */
-    justify-content: space-around;
-    align-items: center;
-    padding: 4.5rem 9rem; /* Keep padding consistent or adjust */
+    padding: 1rem 0rem;
   }
-
-  .hero-section .img {
-    margin-top: -5rem; /* Adjust image margin */
-    width: 40%; /* Image takes less width on larger screens */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2.5rem 2rem 0 2rem;
   }
+  .rated .text-rate {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  .btn-box .btn {
+    font-size: 0.8rem;
+  }
+  .text-box h1 {
+    font-size: 2.2rem; /* Adjust heading size for small screens */
+  }
+  .text-box p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+  }
+  .text-box .btn-box {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .img .hidasie-service {
+    margin: 0 auto;
+  }
+  .counters {
+    /* grid-column: auto; */
+    margin: 0 auto;
+    gap: 0.5rem;
+    padding: 1rem 2rem 0rem 2rem;
+  }
+  .counters .counter .number {
+    font-size: 2rem;
+  }
+  .counters .counter .details {
+    font-size: 1rem;
+  }
+}
 
-  .hero-section .text-box {
-    margin-top: 0rem; /* Reset text box margin */
-    width: 50%; /* Text box takes more width */
-    text-align: left;
+/* Medium devices small screen laptops*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    gap: 12rem;
+    padding: 1rem 3rem;
   }
 
   .text-box h1 {
-    font-size: 3.6rem; /* Adjust heading font size */
+    font-size: 3.6rem; /* Adjust heading size for small screens */
   }
-
-  /* No specific changes for p, btn-box, btn, icon-btn from tablet size */
-  /* If needed, add more specific adjustments here */
-}
-
-/* Media query for large desktops (screens > 1024px) */
-@media (min-width: 1025px) {
-  .hero-section {
-    height: 60vh; /* Full height for large screens */
-    padding: 6rem 12rem; /* Larger padding for large screens */
-    flex-direction: row; /* Elements side-by-side */
-    justify-content: space-around;
-    align-items: center;
+  .text-box p {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
   }
-
-  .hero-section .img {
-    margin-top: 0; /* Reset image margin */
-    width: 35%; /* Adjust image width */
+  .text-box .btn-box {
+    justify-content: center;
+    margin-top: 1rem;
   }
-
-  .hero-section .img .hidasie-service {
+  .img .hidasie-service {
+    margin-top: -3rem;
+  }
+  .container-counter {
+    margin: 4rem 9rem;
     width: 100%;
+    margin-left: -5rem;
   }
-
-  .hero-section .text-box {
-    margin-top: 0;
-    width: 55%; /* Adjust text box width */
-    text-align: left;
-  }
-
-  .text-box h1 {
-    font-size: 4.8rem; /* Larger font size for main heading */
-    margin-bottom: 1.5rem; /* Add some space below heading */
-  }
-
-  .text-box p {
-    font-size: 1.5rem; /* Larger font size for paragraph */
-    margin-bottom: 3rem;
-  }
-
-  .btn-box {
-    justify-content: flex-start; /* Align buttons to start */
-  }
-
-  .btn-box .btn,
-  .btn-box .icon-btn {
-    font-size: 1.3rem; /* Larger font size for buttons */
+  .container-counter .counters .counter {
     padding: 1rem 2rem;
-    border-radius: 50px;
+    gap: 1rem;
+    text-wrap: wrap;
   }
-
-  .container-counter {
-    padding: 6rem 4.5rem; /* Larger padding for counter section */
-    font-size: 3.5rem; /* Larger base font size */
-  }
-
-  .container-counter .counters {
-    width: 50%; /* Narrower counter section for large screens */
-  }
-
   .container-counter .counters .counter .number {
-    font-size: 3.5rem; /* Adjust number size */
+    font-size: 2rem;
   }
-
   .container-counter .counters .counter p {
-    font-size: 1.2rem; /* Adjust text size for counter descriptions */
+    font-size: 1rem;
   }
 }
 
@@ -554,6 +431,7 @@
     padding: 4rem 1rem;
   }
   .stand {
+    display: block;
     padding: 1.5rem 0rem;
     text-align: center;
     grid-template-columns: 1fr;
@@ -603,7 +481,7 @@
     line-height: 2;
   }
   .stand-img img {
-    margin-left: 2rem;
+    margin-left: -15rem;
   }
 }
 @media (max-width: 1024px) {

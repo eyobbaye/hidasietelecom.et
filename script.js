@@ -34,12 +34,3 @@ const year = document.querySelector("#copy-right-year");
 year.innerHTML = copyRightYear;
 
 // Testimonials
-
-const testimonalsCard = document.querySelectorAll(".tesimonials-hover");
-
-testimonalsCard.forEach((event) => {
-  event.addEventListener("mouseover", () => {
-    event.classList.toggle("tesimonials-hover"); // Or card.classList.toggle("tesimonials-hover-active");
-    console.log("mouse over");
-  });
-});
