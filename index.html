@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta name="description" content="Hidasie Telecom s.c offical website" />
     <meta
       name="keywords"
@@ -17,8 +19,9 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
+    <link href="main-style.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <link href="media-query.css" rel="stylesheet" />
+    <!-- <link href="media-query.css" rel="stylesheet" /> -->
     <link rel="icon" href="assets/ht.png" />
     <title>Home</title>
   </head>
@@ -45,7 +48,7 @@
 
     <main>
       <section class="hero-section" aria-label="hero-section">
-        <div class="hero">
+        <div class="hero grid">
           <div class="text-box">
             <div class="rated">
             <div class="text-rate">Rated 4.9 of 5</div>
@@ -58,7 +61,7 @@
             </div>
             
            </div>
-            <h1>Get where you're going faster with 
+            <h1 class="hero-heading">Get where you're going faster with 
             <span class="span"> Hidasie</h1>
             <p>
               We are at the forefront of revolutionizing telecom
@@ -106,13 +109,13 @@
       </section>
       <section class="services">
         <div class="container">
-          <h1>
+          <h2 class="heading-secondary">
             Comprehensive Telecom Solutions Tailored for You
             <span
               >Unlock unparalleled telecom access and services for only
               74,665,700 Birr.</span
             >
-          </h1>
+          </h2>
           <div class="container grid grid--4--cols">
             <div class="feature">
               <img
@@ -177,7 +180,6 @@
         </div>
       </section>
       <section class="section-stand">
-        <div class="stand-container">
           <div class="stand">
             <div class="stand-text-box">
               <h2 class="heading-secondary">
@@ -190,7 +192,7 @@
               </p>
             </div>
             <div class="stand-img">
-              <img
+              <img class="women-img"
                 loading="lazy"
                 src="assets/business_woman.png"
                 role="img"
@@ -198,13 +200,10 @@
               />
             </div>
           </div>
-        </div>
       </section>
       <section class="section-about-us">
         <div class="about-us-container">
-          <div class="about-us">
             <div class="about-us-img-box">
-              <div class="about-us-img-box-container">
                 <div class="card">
                   <div class="cardImg">
                     <img src="assets/bg-img.png" />
@@ -217,7 +216,6 @@
                   <div class="tag">
                     <p><span>13+</span> Years of Pioneering Telecommunications</p>
                   </div>
-                </div>
               </div>
             </div>
             <div class="about-us-text-box">
@@ -257,7 +255,6 @@
               <a href="" class="contact-us-link">contact us today</a>
             </div>
           </div>
-        </div>
       </section>
       <section class="section-landscape">
         <div class="landscape-container">

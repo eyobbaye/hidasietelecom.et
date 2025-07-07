@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="hero-section" aria-label="hero-section">
+      <div class="hero">
+        <div class="text-box">
+          <div class="rated">
+            <div class="text-rate">Rated 4.9 of 5</div>
+            <div class="rated-icon">
+              <ion-icon class="play-icon star-rate" name="star"></ion-icon>
+              <ion-icon class="play-icon star-rate" name="star"></ion-icon>
+              <ion-icon class="play-icon star-rate" name="star"></ion-icon>
+              <ion-icon class="play-icon star-rate" name="star"></ion-icon>
+              <ion-icon class="play-icon star-rate" name="star-half"></ion-icon>
+            </div>
+          </div>
+          <h1
+            >Get where you're going faster with
+            <span class="span">Hidasie</span></h1
+          >
+          <p>
+            We are at the forefront of revolutionizing telecom access across
+            Ethiopia over 800 shops nationwide,
+          </p>
+          <div class="btn-box">
+            <button type="button" class="btn"> check our service </button>
+            <a href="#" class="icon-btn" type="button">
+              <ion-icon class="play-icon" name="play-outline"></ion-icon>
+            </a>
+            <span class="watch-video-text">Watch Video</span>
+          </div>
+        </div>
+        <div class="img">
+          <img
+            src="assets/Your paragraph text(6).gif"
+            class="hidasie-service"
+            alt="image of women with icon of hidasietelecom service around women"
+          />
+        </div>
+        <div class="counters">
+          <div class="counter">
+            <h2 class="number"
+              ><span class="value" data-value="800">0</span>+</h2
+            >
+            <p class="details">Shops Across Ethiopia</p>
+          </div>
+          <div class="counter">
+            <h2 class="number"
+              ><span class="value" data-value="20">0</span>K+</h2
+            >
+            <p class="details">Loyal Sales-Agents</p>
+          </div>
+          <div class="counter">
+            <h2 class="number">
+              <span class="value" data-value="450">0</span>K+
+            </h2>
+            <p class="details">Creative Employee</p>
+          </div>
+          <div class="counter">
+            <h2 class="number">
+              <span class="value" data-value="280">0</span>K+
+            </h2>
+            <p class="details">Shareholders</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Base Mobile Styles (Single Column) */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      .hero-section {
+        padding: 1.5rem 1rem;
+        background-color: #f8f9fa;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      .hero {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .img {
+        order: 2;
+        display: flex;
+        justify-content: center;
+      }
+
+      .hidasie-service {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .rated {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .rated-icon {
+        display: flex;
+        color: #ffc107;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+        margin-bottom: 1rem;
+        color: #212529;
+      }
+
+      .span {
+        color: #0d6efd;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        background-color: #0d6efd;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 0.9rem;
+      }
+
+      .btn:hover {
+        background-color: #0b5ed7;
+      }
+
+      .icon-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #e9ecef;
+        color: #0d6efd;
+        transition: all 0.3s;
+      }
+
+      .icon-btn:hover {
+        background-color: #dee2e6;
+      }
+
+      .play-icon {
+        font-size: 1.25rem;
+      }
+
+      .watch-video-text {
+        color: #6c757d;
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .counters {
+        order: 3;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .counter {
+        text-align: center;
+        padding: 1rem 0.5rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .number {
+        font-size: 1.5rem;
+        color: #212529;
+        margin-bottom: 0.25rem;
+      }
+
+      .details {
+        font-size: 0.8rem;
+        color: #6c757d;
+      }
+
+      /* Small Mobile Devices (320px-480px) */
+      @media (max-width: 480px) {
+        .hero-section {
+          padding: 1rem 0.8rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .counters {
+          gap: 0.8rem;
+        }
+
+        .counter {
+          padding: 0.8rem 0.3rem;
+        }
+
+        .number {
+          font-size: 1.3rem;
+        }
+
+        .details {
+          font-size: 0.75rem;
+        }
+      }
+
+      /* Tablet Styles (768px and up) - switches to two columns */
+      @media (min-width: 768px) {
+        .hero {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .text-box {
+          flex: 1;
+          min-width: 300px;
+        }
+
+        .img {
+          flex: 1;
+          min-width: 300px;
+          order: 2;
+        }
+
+        .counters {
+          flex-basis: 100%;
+          order: 3;
+          grid-template-columns: repeat(4, 1fr);
+          margin-top: 2rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+
+      /* Desktop Styles (992px and up) */
+      @media (min-width: 992px) {
+        .hero-section {
+          padding: 2rem;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .counters {
+          position: relative;
+          top: 20px;
+        }
+
+        .counter {
+          padding: 1.5rem 1rem;
+        }
+
+        .number {
+          font-size: 1.75rem;
+        }
+
+        .details {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Animation for counter numbers */
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .value {
+        display: inline-block;
+        animation: countUp 0.8s ease-out forwards;
+      }
+    </style>
+
+    <script>
+      // Counter animation script
+      document.addEventListener("DOMContentLoaded", () => {
+        const counters = document.querySelectorAll(".value");
+        const speed = 200;
+
+        const animateCounters = () => {
+          counters.forEach((counter) => {
+            const target = +counter.getAttribute("data-value");
+            const count = +counter.innerText;
+            const increment = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(animateCounters, 1);
+            } else {
+              counter.innerText = target;
+            }
+          });
+        };
+
+        // Trigger animation when element is in viewport
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounters();
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+
+        document
+          .querySelector(".counters")
+          .querySelectorAll(".value")
+          .forEach((value) => {
+            observer.observe(value);
+          });
+      });
+    </script>
+  </body>
+</html>

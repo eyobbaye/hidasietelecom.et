@@ -60,7 +60,7 @@ html {
   /* font-size: 10px; */
   /* percentage of user's browser font-size setting */
   /* 10px / 16px = 0.625 = 62.5% */
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
   height: 100%;
 }
 body {
@@ -69,6 +69,7 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  min-height: 100vh;
 }
 
 /* Progress scroll Animation */
@@ -80,7 +81,6 @@ body {
   left: 0;
   width: 100%;
   height: 1rem;
-  /* Background and Color */
   background-color: var(--color-secondary);
   /* Transform and Animation */
   transform-origin: left;
@@ -99,11 +99,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 8rem;
+  height: 4rem;
   width: 100%;
   position: sticky;
   top: 0;
-  /* background-color: var(--color-priamary); */
   background-color: #234d7c;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -113,7 +112,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1rem;
   max-width: 1600px;
 }
 .navbar-logo {
@@ -156,6 +155,7 @@ body {
   margin: 0.5rem auto;
   background-color: var(--color-white);
 }
+
 @media (max-width: 880px) {
   .navbar {
     backdrop-filter: none;
@@ -168,7 +168,6 @@ body {
     position: absolute;
     height: 100vh;
     width: 20rem;
-    /* background-color: var(--color-priamary); */
     background-color: #234d7c;
     top: 0;
     right: 0;
@@ -193,6 +192,9 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .navbar {
+    height: 2rem;
+  }
   .navbar-container {
     padding: 0 1rem;
   }
@@ -204,40 +206,102 @@ body {
     padding: 0.3rem 1.5rem;
   }
 }
+
+/* Phones */
+@media (max-width: 576px) {
+  .navigation ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  header {
+    padding: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navigation {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    flex-direction: column;
+  }
+
+  .navigation.open {
+    max-height: 300px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navigation ul li a {
+    padding: 10px 20px;
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navigation ul {
+    gap: 15px;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+}
+
 .hero-section {
-  padding: 0rem 2rem 0rem 2rem;
+  padding: 1.5rem 1rem;
+  /* background-color: var(--color-priamary); */
   background-color: #234d7c;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .hero {
-  height: 100vh;
-  max-width: 160rem;
-  margin: 0rem auto;
-  padding: 0rem 4.8rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4.6rem;
-  align-items: center;
-}
-.text-box .rated {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 1.6rem;
+  flex-direction: column;
+  gap: 2rem;
 }
-.rated .rated-icon {
-  margin-left: 1rem;
+.img {
+  order: 2;
+  display: flex;
+  justify-content: center;
+}
+.hidasie-service {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.rated {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+.rated-icon {
+  display: flex;
+  color: var(--color-secondary);
   animation: to_right 1s ease forwards 1.5s;
 }
-.rated-icon .star-rate {
-  color: var(--color-secondary);
-  font-weight: bold;
-  animation: to_right 1s ease forwards 1.2s;
-}
-.text-box .text-rate {
+.text-rate {
   border: 1px solid var(--color-white);
   color: var(--color-white);
-  padding: 1rem 1.5rem;
-  font-weight: bold;
+  padding: 0.5rem 1.5rem;
   border-radius: 5rem;
   box-shadow: 0px 1rem 1rem rgba(0, 0, 0, 0.2);
   background-color: var(--color-priamary);
@@ -246,11 +310,9 @@ body {
 }
 .text-box h1 {
   color: var(--color-white);
-  font-size: 5.6rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
   animation: to_right 1s ease;
   animation-fill-mode: forwards 1.3s;
 }
@@ -259,9 +321,9 @@ body {
   animation-delay: 1.5s;
 }
 .text-box p {
-  font-size: 2rem;
-  line-height: 1.6;
-  margin-bottom: 4.8rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
   color: var(--color-white);
   animation: to_right 1s ease forwards 1.5s;
 }
@@ -285,6 +347,50 @@ h5 {
 .btn-box {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.btn-box .btn {
+  background-color: #0c54a4;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: to_up 1s ease forwards 1.9s;
+}
+.btn-box .btn:hover,
+.btn-box .btn:active {
+  background-color: var(--color-white);
+  color: var(--color-priamary);
+  box-shadow: 0 0 15px var(--color-priamary);
+}
+.btn:link,
+.btn:visited {
+  color: #0c54a4;
+  background-color: #fff;
+}
+.btn-box .icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s;
+  animation: to_up 1s ease forwards 2s;
+}
+.icon-btn:hover {
+  background-color: #dee2e6;
 }
 .watch-video-text {
   font-weight: bold;
@@ -294,80 +400,114 @@ h5 {
   animation: to_up 1s ease forwards 2.5s;
 }
 .play-icon {
-  width: 2rem;
-  height: 2rem;
-}
-.btn-box .icon-btn {
-  background-color: var(--color-white);
-  color: var(--color-secondary);
-  padding: 0.6rem;
-  border-radius: 50%;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: 0.3s;
-  animation: to_up 1s ease forwards 2s;
-}
-.btn-box .btn {
-  background-color: #0c54a4;
-  padding: 10px 20px;
-  border-radius: 50px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  border: none;
-  color: var(--color-white);
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-  animation: to_up 1s ease forwards 1.9s;
-}
-.btn:link,
-.btn:visited {
-  color: #0c54a4;
-  background-color: #fff;
-}
-.btn:hover,
-.btn:active {
-  background-color: var(--color-white);
-  color: var(--color-priamary);
-  box-shadow: 0 0 15px var(--color-priamary);
-}
-.img .hidasie-service {
-  width: 90%;
-  margin-top: 8rem;
-  animation: to_left 1s ease forwards 1.5s;
-  opacity: 0;
+  font-size: 1.25rem;
 }
 /* Count Number Section */
 .counters {
-  max-width: 80%;
+  order: 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background: var(--color-white);
   box-shadow: var(--box-shadow);
-  padding: 1.5rem 9rem;
   color: var(--color-secondary);
-  border-radius: 50px;
-  text-wrap: wrap;
-  gap: 4rem;
-  margin: -5rem auto auto auto;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column: 1 / span 2;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-radius: 30px;
+
+  /* grid-column: 1 / span 2; */
 }
 .counters .counter {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 300ms ease;
   animation: to_up 1s ease;
   animation-duration: forwards 1.3s;
 }
 .counters .counter .number {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 .counters .counter .details {
   color: var(--color-priamary);
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 0.5rem;
+}
+/* Small Mobile Devices (320px-480px) */
+@media screen and (max-width: 480) {
+  .hero-section {
+    padding: 1rem 0.8rem;
+  }
+  .text-box h1 {
+    font-size: 1.5rem;
+  }
+  .counters {
+    gap: 0.8rem;
+  }
+  .counter {
+    padding: 0.8rem 0.3rem;
+  }
+  .number {
+    font-size: 1.3rem;
+  }
+  .details {
+    font-size: 0.75rem;
+  }
+}
+/* Tablet Styles (768px and up) - switches to two columns */
+@media screen and (min-width: 768px) {
+  .hero-section {
+    /* height: 75vh; */
+  }
+  .hero {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .text-box {
+    flex: 1;
+    min-width: 300px;
+  }
+  .img {
+    flex: 1;
+    min-width: 300px;
+    order: 2;
+  }
+  .counters {
+    flex-basis: 80%;
+    order: 3;
+    margin: 0 auto;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .text-box h1 {
+    font-size: 2rem;
+  }
+  /* Desktop Styles (992px and up) */
+  @media screen and (min-width: 992px) {
+    .hero-section {
+      padding: 2rem;
+      /* height: 75vh; */
+    }
+    .text-box h1 {
+      font-size: 2.5rem;
+    }
+    .text-box p {
+      margin-bottom: 4rem;
+      font-size: 1.2rem;
+    }
+    .counters {
+      position: relative;
+      top: 20px;
+    }
+    .counters .counter {
+      padding: 1.5rem 1rem;
+    }
+    .counters .counter .number {
+      font-size: 1.75s;
+    }
+    .counters .counter .details {
+      font-size: 0.9rem;
+    }
+  }
 }
 @keyframes to_bottom {
   0% {
@@ -409,19 +549,74 @@ h5 {
     transform: translateX(0);
   }
 }
+/* Service Section */
+/* Base styles - Mobile-first approach */
 .services {
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 9rem;
-  justify-content: space-between;
+  padding-right: 1rem;
 }
-.services h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+
+.services .container .heading-secondary {
+  font-size: 1.6rem; /* A good base size for mobile */
+  /* padding: 2rem 0; Adjust padding as a base */
+  margin: 1rem 0; /* Adjust margin as a base */
+  text-align: center; /* Often good for titles on mobile */
   color: var(--color-priamary);
-  text-align: center;
-  padding: 0 6rem;
-  margin: 3rem 0;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to a single column for smaller screens */
+  gap: 1.5rem; /* Add some spacing between grid items */
+}
+
+.feature {
+  margin: 0; /* Remove specific margin on feature for mobile, let gap handle it */
+  padding: 1rem; /* Add some internal padding to features */
+  /* Add other base feature styles here like border, box-shadow etc. */
+}
+
+/* --- */
+@media (max-width: 480px) {
+  .services {
+    padding: 1rem; /* Increase padding for larger screens */
+  }
+
+  .services .container h1 {
+    font-size: 2.2rem;
+    padding: 3rem 0;
+    margin: 2rem;
+  }
+
+  .services .grid {
+    grid-template-columns: 1fr; /* Two columns for tablets */
+  }
+
+  /* Specific rule for the first feature on tablets, if it needs to span rows */
+  .services .grid .feature:nth-child(1) {
+    grid-row: 1 span/ 2;
+  }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 760px) {
+  .services .container h1 {
+    font-size: 2.8rem; /* Even larger heading for desktops */
+  }
+  .services .grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+  }
+  .services .grid .feature:nth-child(1) {
+    grid-row: span 2; /* Reset grid-row for larger screens if not needed */
+  }
+}
+/* Even larger desktops (optional) */
+@media (min-width: 1025px) {
+  .services .container h1 {
+    font-size: 3.2rem; /* Max font size for very large screens */
+  }
+  .services {
+    padding: 4rem 9rem; /* More padding for very large screens */
+  }
 }
 .services span {
   font-size: 1rem;
@@ -431,20 +626,11 @@ h5 {
   display: block;
   text-align: center;
 }
-.grid {
-  display: grid;
-  column-gap: 0rem;
-  row-gap: 1.2rem;
-}
-.services .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
 .services .grid .feature:nth-child(1) {
   grid-row: span 3;
 }
 .feature {
-  padding: 1rem 2rem;
+  padding: 4.5rem rem;
   border-radius: var(--border-radius-2);
   box-shadow: var(--box-shadow);
   background-color: var(--color-white);
@@ -498,41 +684,42 @@ h5 {
   color: #747373;
   line-height: 2.5rem;
 }
+
 /* SECTRION STAND */
 .section-stand {
-  padding: 4.5rem 9rem;
+  padding: 2rem 1rem; /* Padding for mobile */
+  background-color: #ffffff; /* White background for the section */
+  margin: 1rem; /* Margin around the section */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 .stand {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
-  border-radius: 11px;
-  position: relative;
-  height: 30rem;
+  display: flex;
+  flex-direction: column; /* Stack content vertically on mobile */
+  align-items: center; /* Center items horizontally */
+  max-width: 1200px; /* Max width for the content */
+  margin: 0 auto; /* Center the content */
 }
 .stand .stand-text-box {
   background-color: #062c56;
-  padding: 4rem 4rem 0rem 4rem;
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
+  text-align: center; /* Center text on mobile */
+  padding: 0 1rem; /* Inner padding for text */
+  border-top-left-radius: 0.5rem; /* Rounded corners */
+  border-top-right-radius: 0.5rem; /* Rounded corners */
 }
 .stand-text-box .heading-secondary {
   color: var(--color-secondary);
-  margin-bottom: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  font-size: 3.6rem;
+  font-size: 1.2rem; /* Mobile heading size */
+  font-weight: 700; /* Bold */
   line-height: 1.2;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem; /* Rounded corners */
   animation: to_right 0.3s linear forwards;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
 .stand-text-box .stand-text {
-  font-size: 1.8rem;
-  line-height: 3rem;
-  margin-top: 3rem;
-  font-weight: 600;
-  width: 80%;
+  font-size: 0.8rem; /* Mobile paragraph size */
+  line-height: 2;
   color: var(--color-white);
   animation: to_right 0.3s linear forwards;
   animation-timeline: view();
@@ -540,20 +727,97 @@ h5 {
 }
 .stand .stand-img {
   background-color: #e67e22;
-  height: 30rem;
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
+  display: flex;
+  justify-content: center; /* Center image */
+  align-items: center;
+  width: 100%; /* Full width on mobile */
+  border-bottom-left-radius: 0.5rem; /* Rounded corners */
+  border-bottom-right-radius: 0.5rem; /* Rounded corners */
+  overflow: hidden; /* Ensure image corners are rounded */
 }
-.stand-img img {
-  height: 35rem;
-  margin-left: 10rem;
-  position: absolute;
-  bottom: 0rem;
-  top: -5rem;
+.stand-img .women-img {
+  width: 100%; /* Make image fill its container */
+  display: block; /* Remove extra space below image */
+  border-radius: 0.75rem; /* Rounded corners for the image itself */
   animation: appear 0.9s linear forwards;
   animation-timeline: view();
   animation-range: entry 3% cover 35%;
 }
+@media screen and (min-width: 480px) {
+  .section-stand {
+    padding: 1.5rem 0.75rem; /* Slightly less padding for very small screens */
+    margin: 0.75rem;
+  }
+  .stand-text-box .heading-secondary {
+    font-size: 1.6rem; /* Smaller heading for very small screens */
+  }
+  .stand-text-box .stand-text {
+    font-size: 1.2rem; /* Smaller text for very small screens */
+    line-height: 2;
+  }
+}
+
+/* ablet Styles (768px and up) */
+@media (min-width: 768px) {
+  .section-stand {
+    padding: 2rem 1rem;
+  }
+
+  .stand {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    flex-direction: row;
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Vertically align items */
+  }
+
+  .stand .stand-text-box {
+    flex: 0;
+    height: 100%;
+    padding: 1rem;
+    text-align: left; /* Align text to left on desktop */
+    border-radius: 0.75rem 0rem 0rem 0.75rem;
+  }
+  .stand-text-box .heading-secondary {
+    margin-bottom: 2rem;
+  }
+  .stand-text-box .stand-text {
+    font-size: 1.125rem; /* Keep same as tablet or adjust */
+    line-height: 2;
+    margin-bottom: 0;
+  }
+  .stand .stand-img {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0rem 0.75rem 0.75rem 0rem;
+  }
+  .stand-img .women-img {
+    max-width: 100%;
+  }
+}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {
+  .section-stand {
+    /* padding: 5rem 4rem; */
+    padding: 0rem;
+  }
+  .stand .stand-text-box {
+    padding: 2rem 4rem;
+  }
+  .stand-text-box .heading-secondary {
+    font-size: 3rem; /* Larger heading for large screens */
+  }
+
+  .stand-text-box .stand-text {
+    font-size: 1.75rem; /* Larger paragraph for large screens */
+  }
+  .stand-img {
+    max-width: 600px; /* Even larger max width for very large screens */
+  }
+}
+/* About US Section */
+
 .section-about-us {
   padding: 4.5rem 9rem;
 }
