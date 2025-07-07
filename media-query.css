@@ -1,224 +1,5 @@
 /* ✅ Responsive Breakpoints */
 
-/* Tablets */
-@media (max-width: 992px) {
-  header {
-    padding: 20px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navigation ul {
-    gap: 15px;
-    margin-top: 10px;
-    padding-left: 0;
-  }
-
-  .text-box h1 {
-    font-size: 36px;
-  }
-
-  .home {
-    flex-direction: column;
-    padding: 100px 20px 40px;
-  }
-
-  .home .text-box,
-  .home .img {
-    flex: 1 1 100%;
-  }
-
-  .home .img {
-    text-align: center;
-  }
-
-  .home .img .laptop {
-    max-width: 80%;
-  }
-}
-
-/* Phones */
-@media (max-width: 576px) {
-  .text-box h1 {
-    font-size: 30px;
-  }
-
-  .text-box p {
-    font-size: 14px;
-  }
-
-  .btn-box .btn {
-    font-size: 13px;
-    padding: 8px 16px;
-  }
-
-  .navigation ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  header {
-    padding: 15px;
-  }
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .navigation {
-    width: 100%;
-    max-height: 0;
-    overflow: hidden;
-    background-color: white;
-    flex-direction: column;
-  }
-
-  .navigation.open {
-    max-height: 300px;
-  }
-
-  .navigation ul {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .navigation ul li a {
-    padding: 10px 20px;
-    display: block;
-    margin-left: 0;
-  }
-}
-/* Extra small devices (phones)*/
-@media screen and (min-width: 320px) and (max-width: 480px) {
-  .hero-section {
-    padding: 1rem 0rem;
-  }
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2.5rem 2rem 0 2rem;
-  }
-  .rated .text-rate {
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-  .btn-box .btn {
-    font-size: 0.8rem;
-  }
-  .text-box h1 {
-    font-size: 2.2rem; /* Adjust heading size for small screens */
-  }
-  .text-box p {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-  }
-  .text-box .btn-box {
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  .img .hidasie-service {
-    margin: 0 auto;
-  }
-  .counters {
-    grid-column: auto;
-    margin: 0 auto;
-    gap: 0.5rem;
-    padding: 1rem 2rem 0rem 2rem;
-  }
-  .counters .counter .number {
-    font-size: 2rem;
-  }
-  .counters .counter .details {
-    font-size: 1rem;
-  }
-}
-
-/* Small devices (ipad and tablets */
-@media screen and (min-width: 481px) and (max-width: 768px) {
-  .hero-section {
-    padding: 1rem 0rem;
-  }
-  .hero {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2.5rem 2rem 0 2rem;
-  }
-  .rated .text-rate {
-    font-size: 0.8rem;
-    padding: 1rem;
-  }
-  .btn-box .btn {
-    font-size: 0.8rem;
-  }
-  .text-box h1 {
-    font-size: 2.2rem; /* Adjust heading size for small screens */
-  }
-  .text-box p {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-  }
-  .text-box .btn-box {
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  .img .hidasie-service {
-    margin: 0 auto;
-  }
-  .counters {
-    /* grid-column: auto; */
-    margin: 0 auto;
-    gap: 0.5rem;
-    padding: 1rem 2rem 0rem 2rem;
-  }
-  .counters .counter .number {
-    font-size: 2rem;
-  }
-  .counters .counter .details {
-    font-size: 1rem;
-  }
-}
-
-/* Medium devices small screen laptops*/
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .hero {
-    gap: 12rem;
-    padding: 1rem 3rem;
-  }
-
-  .text-box h1 {
-    font-size: 3.6rem; /* Adjust heading size for small screens */
-  }
-  .text-box p {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-  }
-  .text-box .btn-box {
-    justify-content: center;
-    margin-top: 1rem;
-  }
-  .img .hidasie-service {
-    margin-top: -3rem;
-  }
-  .container-counter {
-    margin: 4rem 9rem;
-    width: 100%;
-    margin-left: -5rem;
-  }
-  .container-counter .counters .counter {
-    padding: 1rem 2rem;
-    gap: 1rem;
-    text-wrap: wrap;
-  }
-  .container-counter .counters .counter .number {
-    font-size: 2rem;
-  }
-  .container-counter .counters .counter p {
-    font-size: 1rem;
-  }
-}
-
 /* footer */
 /* --- Media Queries for Responsiveness --- */
 
@@ -349,81 +130,7 @@
     padding: 0.5rem;
   }
 }
-/* Service Section */
-/* Base styles - Mobile-first approach */
-.services {
-  padding: 1rem; /* Start with a base padding, can be adjusted for smaller screens if needed */
-}
 
-.services .container h1 {
-  font-size: 2rem; /* A good base size for mobile */
-  padding: 2rem 0; /* Adjust padding as a base */
-  margin: 1rem; /* Adjust margin as a base */
-  text-align: center; /* Often good for titles on mobile */
-}
-
-.services .grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Default to a single column for smaller screens */
-  gap: 1.5rem; /* Add some spacing between grid items */
-}
-
-.feature {
-  margin: 0; /* Remove specific margin on feature for mobile, let gap handle it */
-  padding: 1rem; /* Add some internal padding to features */
-  /* Add other base feature styles here like border, box-shadow etc. */
-}
-
-/* --- */
-
-/* Tablet and larger screens */
-@media (min-width: 481px) {
-  .services {
-    padding: 2rem; /* Increase padding for larger screens */
-  }
-
-  .services .container h1 {
-    font-size: 2.2rem; /* Slightly larger heading for tablets */
-    padding: 3rem 0;
-    margin: 2rem;
-  }
-
-  .services .grid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-  }
-
-  /* Specific rule for the first feature on tablets, if it needs to span rows */
-  .services .grid .feature:nth-child(1) {
-    grid-row: span 2;
-  }
-}
-
-/* Desktop and larger screens */
-@media (min-width: 769px) {
-  .services .container h1 {
-    font-size: 2.8rem; /* Even larger heading for desktops */
-  }
-
-  .services .grid {
-    grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
-  }
-
-  .services .grid .feature:nth-child(1) {
-    grid-row: span 3; /* Reset grid-row for larger screens if not needed */
-  }
-}
-
-/* --- */
-
-/* Even larger desktops (optional) */
-@media (min-width: 1025px) {
-  .services .container h1 {
-    font-size: 3.2rem; /* Max font size for very large screens */
-  }
-  .services {
-    padding: 4rem 0; /* More padding for very large screens */
-  }
-}
 /* SETION STAND */
 
 @media (max-width: 480px) {
@@ -431,10 +138,10 @@
     padding: 4rem 1rem;
   }
   .stand {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 1.5rem 0rem;
     text-align: center;
-    grid-template-columns: 1fr;
   }
   .stand .stand-text-box {
     padding: 2rem;
@@ -442,7 +149,7 @@
     border-top-right-radius: 2rem;
   }
   .stand-text-box .heading-secondary {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .stand-text-box .stand-text {
     font-size: 1.4rem;
@@ -455,13 +162,6 @@
   .stand .stand-img {
     border-top-right-radius: 0;
     border-bottom-left-radius: 2rem;
-    min-height: 35rem;
-  }
-  .stand .stand-img img {
-    width: 80%;
-    height: 45rem;
-    margin-left: -15rem;
-    top: 20.9rem;
   }
 }
 @media (max-width: 768px) {
