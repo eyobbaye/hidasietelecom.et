@@ -99,7 +99,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3rem 0;
   width: 100%;
+  height: 4rem;
   position: sticky;
   top: 0rem;
   background-color: #234d7c;
@@ -830,64 +832,52 @@ h5 {
 .about-us-img-box,
 .about-us-text-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.675rem;
-}
-.card {
-  position: relative;
-  animation: appear 0.3s linear forwards;
-  animation-timeline: view();
-  animation-range: entry 5% cover 35%;
-}
-.cardImg {
-  /* background-color: var(--color-white); */
-  background-color: #062c56;
-  max-width: 100%;
-  width: clamp(
-    20rem,
-    80vw,
-    25rem
-  ); /* Clamp for flexible width: min 20rem, max 25rem, ideal 80vw */
-  height: clamp(15rem, 60vw, 20rem); /* Adjust height similarly */
-  border-radius: 1rem solid var(--color-white);
-  overflow: hidden;
-  position: relative;
-}
-.cardImg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures image covers the area without distortion */
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
-.tag {
-  background-color: var(--color-priamary);
-  /* Adjust width and position for smaller screens */
-  width: clamp(15rem, 70vw, 10rem);
-  height: 4rem;
-  position: absolute;
-  top: 8rem; /* Adjusted based on cardImg height */
-  right: -6.5rem;
-  transform: translateX(-50%); /* Adjust for perfect centering */
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 0rem solid whitesmoke;
-  padding: 0.525rem;
+  flex-wrap: wrap;
+  padding: 2rem 0rem;
+  gap: 0.675rem;
+}
+.card {
+  animation: appear 0.3s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
+  background-color: #062c56;
+  height: 40rem;
+  padding: 2rem;
+}
+.about-img {
+  width: 100%; /* Make width responsive */
+  height: 60%;
+  position: relative;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.tag {
+  background-color: var(--color-priamary);
+  width: clamp(20rem, 70vw, 10rem);
+  height: 6rem;
+  position: absolute;
+  bottom: 0;
+  right: 0rem;
+  display: flex;
   align-items: center;
-  border-radius: 0rem 0rem 1.25rem;
+  justify-content: center;
   padding: 0.525rem;
-  border: 0.2rem solid #062c56;
+  border-radius: 0rem 0rem 0rem 0rem;
+  border: 1rem solid #062c56;
   color: var(--color-white);
 }
 .about-us-desc {
-  font-size: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
   line-height: 1.5;
-  color: var(--color-dark);
+  color: var(--color-white);
   padding: 1rem;
 }
 /* .tag::after {
@@ -904,7 +894,7 @@ h5 {
 .tag p {
   font-size: 1rem;
   line-height: 1.8;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center; /* Center text within the tag */
 }
 .tag span {
@@ -912,35 +902,12 @@ h5 {
   font-size: 1.4rem;
   color: var(--color-secondary);
 }
-.about-img {
-  position: absolute;
-  width: 90%; /* Make width responsive */
-  height: 60%;
-  top: 1.5rem;
-  right: 5%; /* Use percentage for right positioning */
-  /* border-right: 1rem solid var(--color-white); */
-}
-.about-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures image covers the area without distortion */
-  border-radius: 1rem;
-}
-.img-box {
-  position: absolute;
-  width: 100%;
-  height: 240px; /* Consider making this height responsive or using aspect-ratio */
-  background-size: cover;
-  background-position: center;
-  border-radius: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+
 .about-us-span {
   color: var(--color-secondary);
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 1.9rem;
-  padding-top: 1.5rem;
   animation: to_up 0.3s linear forwards;
   animation-timeline: view();
   animation-range: entry 5% cover 35%;
@@ -954,9 +921,6 @@ h5 {
   color: var(--color-priamary);
   border-bottom: 0.5rem solid var(--color-secondary);
   border-style: solid;
-  animation: appear 0.5s linear forwards;
-  animation-timeline: view();
-  animation-range: entry 10% cover 40%;
   text-align: center; /* Center text for smaller screens */
   animation: appear 0.5s linear forwards;
   animation-timeline: view();
@@ -966,25 +930,11 @@ h5 {
   font-size: clamp(1rem, 4vw, 1.6rem); /* Flexible font size */
   line-height: 1.5; /* Adjusted for better readability */
   padding-right: 1rem; /* Reduced padding for smaller screens */
+  color: color;
   animation: appear 0.5s linear forwards;
   animation-timeline: view();
   animation-range: entry 25% cover 65%;
   text-align: center; /* Center text for smaller screens */
-}
-.our-vision-and-goal .our-vision,
-.our-goal {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-white);
-  box-shadow: 0rem 0.2rem 0.5rem var(--color-secondary);
-  border-radius: var(--border-radius-3);
-  transition: all 0.3 ease-in-out;
-  text-align: center; /* Center text for smaller screens */
-}
-.our-vision-and-goal .our-vision:hover,
-.our-goal:hover {
-  box-shadow: none;
 }
 .our-vision-and-goal {
   display: grid;
@@ -1001,6 +951,22 @@ h5 {
   animation-timeline: view();
   animation-range: entry 10% cover 40%;
 }
+.our-vision-and-goal .our-vision,
+.our-goal {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  box-shadow: 0rem 0.2rem 0.5rem var(--color-secondary);
+  border-radius: var(--border-radius-3);
+  transition: all 0.3 ease-in-out;
+  text-align: center; /* Center text for smaller screens */
+}
+.our-vision-and-goal .our-vision:hover,
+.our-goal:hover {
+  box-shadow: none;
+}
+
 .our-vision-icon,
 .our-goal-icon,
 .des-card-icon {
@@ -1036,7 +1002,6 @@ h5 {
   background-color: var(--color-priamary);
   color: var(--color-white);
   padding: 1rem 1.5rem; /* Adjusted padding */
-  margin-top: 1rem; /* Added some top margin */
   font-size: 1.2rem; /* Slightly reduced font size */
   text-transform: uppercase;
   display: inline-flex;
@@ -1060,6 +1025,7 @@ h5 {
   background-color: var(--color-white);
   color: var(--color-priamary);
 }
+chro
 /* --- Media Queries for Larger Screens --- */
 
 /* Tablet and larger screens (e.g., 600px and up) */
