@@ -845,7 +845,7 @@ h5 {
   animation-range: entry 5% cover 35%;
   background-color: #062c56;
   height: 40rem;
-  padding: 2rem;
+  padding: 1rem;
 }
 .about-img {
   width: 100%; /* Make width responsive */
@@ -874,7 +874,7 @@ h5 {
   color: var(--color-white);
 }
 .about-us-desc {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5;
   color: var(--color-white);
@@ -938,12 +938,9 @@ h5 {
 }
 .our-vision-and-goal {
   display: grid;
-  /* On small screens, stack them vertically */
   grid-template-columns: 1fr;
-  align-items: center;
-  justify-content: center; /* Center items when stacked */
-  gap: 1.8rem;
-  padding: 1.5rem; /* Reduced padding for smaller screens */
+  gap: 1rem;
+  padding: 1.5rem;
   border-radius: 2.3rem;
   background-color: var(--color-priamary);
   margin: 2rem 0rem; /* Adjusted margin */
@@ -953,14 +950,18 @@ h5 {
 }
 .our-vision-and-goal .our-vision,
 .our-goal {
-  padding: 4rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-white);
   box-shadow: 0rem 0.2rem 0.5rem var(--color-secondary);
   border-radius: var(--border-radius-3);
   transition: all 0.3 ease-in-out;
-  text-align: center; /* Center text for smaller screens */
+  animation: to_up 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 5% cover 35%;
 }
 .our-vision-and-goal .our-vision:hover,
 .our-goal:hover {
@@ -968,8 +969,7 @@ h5 {
 }
 
 .our-vision-icon,
-.our-goal-icon,
-.des-card-icon {
+.our-goal-icon {
   color: var(--color-white);
   width: 2.4rem;
   height: 2.4rem;
@@ -977,13 +977,6 @@ h5 {
   padding: 0.8rem;
   border-radius: 50%;
   margin-bottom: 1.3rem;
-  align-self: center; /* Center icons within flex container */
-}
-.our-vision,
-.our-goal {
-  animation: to_up 0.5s linear forwards;
-  animation-timeline: view();
-  animation-range: entry 5% cover 35%;
 }
 .our-vision-title,
 .our-goal-title {
@@ -1025,32 +1018,23 @@ h5 {
   background-color: var(--color-white);
   color: var(--color-priamary);
 }
-chro
 /* --- Media Queries for Larger Screens --- */
-
 /* Tablet and larger screens (e.g., 600px and up) */
-@media (min-width: 600px) {
+@media (min-width: 480px) {
   .section-about-us {
     padding: 3rem 2rem; /* Slightly more padding */
   }
-
+  .tag {
+    width: clamp(18rem, 70vw, 10rem); /* Adjusted width for larger screens */
+  }
+  .about-us-desc {
+    font-size: 1.6rem;
+  }
   .about-us-heading,
   .about-us-span,
   .about-us-text {
-    text-align: left; /* Revert text alignment for larger screens */
+    text-align: left;
   }
-
-  .our-vision-and-goal {
-    grid-template-columns: 1fr 1fr; /* Two columns for tablet and up */
-    padding: 2rem; /* Adjusted padding */
-    justify-content: space-between;
-  }
-
-  .our-vision-icon,
-  .our-goal-icon {
-    align-self: flex-start; /* Align icons to the start again */
-  }
-
   .contact-us-link {
     margin-left: 0; /* Align button to the left */
     margin-right: 0;
@@ -1059,30 +1043,53 @@ chro
 }
 
 /* Desktop and larger screens (e.g., 900px and up) */
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .section-about-us {
-    padding: 4.5rem 9rem; /* Original larger padding */
+    padding: 2rem; /* Original larger padding */
   }
-
   .about-us-container {
-    grid-template-columns: 1fr 1fr; /* Two columns for desktop */
+    grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+    gap: 4rem;
   }
-
+  .about-us-img-box,
+  .about-us-text-box {
+    flex-direction: row;
+  }
   .tag {
-    top: 20.5rem; /* Revert to original tag position */
-    right: 40px; /* Revert to original right position */
     left: auto; /* Remove left property */
     transform: none; /* Remove transform */
+    width: clamp(20rem, 70vw, 0rem);
+  }
+  .about-us-desc {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    line-height: 2;
+  }
+  .about-us-heading {
+    font-size: 2.7rem;
+  }
+  .about-us-text {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    padding: 0rem;
+  }
+  .our-vision-and-goal {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+  }
+  .our-vision-and-goal .our-vision,
+  .our-goal {
+    padding: 2rem 1rem;
+  }
+  .our-goal-text,
+  .our-vision-text {
+    font-style: 1rem;
   }
 
   .about-us-text {
     padding-right: 6rem; /* Original padding */
   }
-
-  .our-vision-and-goal {
-    padding: 3rem; /* Original padding */
-    margin: 3rem 0rem 3rem 0rem; /* Original margin */
-  }
+}
+@media screen and (min-width: 992px) {
 }
 
 /* SECTION LANDSCAPE */
