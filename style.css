@@ -60,7 +60,7 @@ html {
   /* font-size: 10px; */
   /* percentage of user's browser font-size setting */
   /* 10px / 16px = 0.625 = 62.5% */
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
   height: 100%;
 }
 body {
@@ -486,28 +486,40 @@ h5 {
   /* Desktop Styles (992px and up) */
   @media screen and (min-width: 992px) {
     .hero-section {
-      padding: 2rem;
-      /* height: 75vh; */
+      padding: 4rem 2rem 0 2rem;
+      height: 90vh;
+    }
+    .rated .text-rate {
+      font-size: 1.2rem;
     }
     .text-box h1 {
-      font-size: 2.5rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      font-size: 5.2rem;
     }
     .text-box p {
       margin-bottom: 4rem;
+      font-size: 2.3rem;
+      line-height: 2;
+    }
+    .btn-box .btn {
       font-size: 1.2rem;
+    }
+    .btn-box .watch-video-text {
+      font-size: 1.3rem;
     }
     .counters {
       position: relative;
-      top: 20px;
+      top: 5rem;
     }
     .counters .counter {
       padding: 1.5rem 1rem;
     }
     .counters .counter .number {
-      font-size: 1.75s;
+      font-size: 2rem;
     }
     .counters .counter .details {
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -600,31 +612,34 @@ h5 {
 }
 
 /* Desktop and larger screens */
-@media (min-width: 760px) {
-  .services .container h1 {
+@media screen and (min-width: 760px) {
+  .services .container .heading-secondary {
     font-size: 2.8rem; /* Even larger heading for desktops */
   }
   .services .grid {
     grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
   }
   .services .grid .feature:nth-child(1) {
-    grid-row: span 2; /* Reset grid-row for larger screens if not needed */
+    grid-row: span 2;
   }
 }
 /* Even larger desktops (optional) */
-@media (min-width: 1025px) {
-  .services .container h1 {
-    font-size: 3.2rem; /* Max font size for very large screens */
-  }
+@media screen and (min-width: 992px) {
   .services {
-    padding: 4rem 9rem; /* More padding for very large screens */
+    padding: 4rem 9rem;
+  }
+  .services .container .heading-secondary {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 3.6rem;
   }
 }
 .services span {
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: var(--color-secondary);
-  margin-top: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
   display: block;
   text-align: center;
 }
