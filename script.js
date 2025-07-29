@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       title: "Electronics Voucher Cards-EVD",
       description:
-        "Nation wide distributer of Ethiotelecom's vocher card: EVD, Air-time.",
+        "Nation wide distributer of Ethiotelecom's vocher card: EVD, Air-time, and sim-cardsgit",
       url: "index.html#telecom-services",
     },
     {
@@ -193,6 +193,81 @@ document.addEventListener("DOMContentLoaded", function () {
                        `;
       searchResults.appendChild(resultElement);
     });
+  });
+  searchInput.addEventListener("input", function (e) {
+    const query = e.target.value.toLowerCase().trim();
+    if (query) {
+      searchResults.style.display = "block";
+    } else {
+      searchResults.style.display = "none";
+    }
+    // Clear previous results
+    searchResults.innerHTML = "";
+    // Filter the data based on the query
+    const results = websitcontent.filter((item) => {
+      return (
+        item.title.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+      );
+    });
+    if (query && results.length === 0) {
+      searchResults.innerHTML = `<div class="no-results">No results found for "${query}"</div>`;
+      return;
+    }
+    if (query && results.length > 0) {
+      searchResults.style.display = "block";
+      searchResults.innerHTML = `<div class="results-count">${results.length} results found for "${query}"</div>`;
+    }
+    results.forEach((item) => {
+      const resultElement = document.createElement("div");
+      resultElement.className = "result-item";
+      resultElement.innerHTML = `
+                        <h2><a href="${item.url}">${highlightText(
+        item.title,
+        query
+      )}</a></h2>
+                        <h5>${highlightText(item.description, query)}</h5>
+                       `;
+      searchResults.appendChild(resultElement);
+    });
+  });
+  searchButton.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent the form from reloading the page
+      const query = searchInput.value.toLowerCase().trim();
+
+      if (!query) {
+        searchResults.innerHTML = "";
+        return;
+      }
+      // Filter the data based on the query
+      const results = websitcontent.filter((item) => {
+        return (
+          item.title.toLowerCase().includes(query) ||
+          item.description.toLowerCase().includes(query)
+        );
+      });
+      if (query && results.length === 0) {
+        searchResults.innerHTML = `<div class="no-results">No results found for "${query}"</div>`;
+        return;
+      }
+      if (query && results.length > 0) {
+        searchResults.style.display = "block";
+        searchResults.innerHTML = `<div class="results-count">${results.length} results found for "${query}"</div>`;
+      }
+      results.forEach((item) => {
+        const resultElement = document.createElement("div");
+        resultElement.className = "result-item";
+        resultElement.innerHTML = `
+                        <h2><a href="${item.url}">${highlightText(
+          item.title,
+          query
+        )}</a></h2>
+                        <h5>${highlightText(item.description, query)}</h5>
+                       `;
+        searchResults.appendChild(resultElement);
+      });
+    }
   });
   function highlightText(text, query) {
     if (!query) return text;
