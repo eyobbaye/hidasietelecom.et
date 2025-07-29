@@ -39,12 +39,22 @@
         <li><a href="#">Contact</a></li>
         <li><a href="#section-about-us">about-us</a></li>
         <li><a href="#blog">News</a></li>
-        <div class="search-container">
-          <input type="text" placeholder="Search.." name="search">
-          <a href="#">
-            <ion-icon name="search-outlborder-radius: 100% / 0 0 30% 30%;ine" class="ion"></ion-icon>
-          </a>
-      </div>
+      <div class="search-container">
+  <input type="text" placeholder="Search services, products..." name="search" id="searchInput">
+  <button type="button" onclick="performSearch()" class="search-btn">
+    <ion-icon name="search-outline"></ion-icon>
+  </button>
+  <div class="search-suggestions" id="searchSuggestions">
+    <div class="suggestion-item" onclick="selectSuggestion('EVD Services')">EVD Services</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Telecom Products')">Telecom Products</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Payment Solutions')">Payment Solutions</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Solar Solutions')">Solar Solutions</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Network Infrastructure')">Network Infrastructure</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Find Nearest Shop')">Find Nearest Shop</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Contact Support')">Contact Support</div>
+    <div class="suggestion-item" onclick="selectSuggestion('Become Distributor')">Become Distributor</div>
+  </div>
+</div>
 
       </ul>
       </div>
