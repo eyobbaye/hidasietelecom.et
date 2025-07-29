@@ -74,7 +74,7 @@ html {
 .navbar {
   position: sticky;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 3rem 0;
   width: 100%;
@@ -103,8 +103,12 @@ html {
 .navbar-container .navbar-menu {
   display: flex;
   text-align: center;
+
   list-style: none;
-  padding: 0 4rem;
+  /* padding: 0 4rem; */
+}
+.navbar-menu li {
+  margin-left: -2rem;
 }
 .search-container {
   height: 3rem;
@@ -202,6 +206,9 @@ html {
 @media (max-width: 880px) {
   .navbar {
     backdrop-filter: none;
+  }
+  .search-container:hover input {
+    width: 10rem;
   }
   .navbar-container .navbar-menu {
     display: none;

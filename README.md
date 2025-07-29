@@ -5,7 +5,7 @@ Welcome to the official website repository of Hidasie Telecom S.C. This project 
 ## 🌐 Overview
 
 This website provides visitors with essential information about Hidasie Telecom’s services, products, and corporate initiatives. It is fully responsive and optimized for seamless viewing across desktop, tablet, and mobile devices.
-[https://www.dev.hidasietelecom.et]
+[https://www.ht.hidasietelecom.et]
 
 ## ✨ Features
 
