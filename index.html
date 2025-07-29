@@ -35,22 +35,30 @@
       </button>
       <ul class="navbar-menu">
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#service">Service and Products</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="service-priducts"><a href="#" class="dropbtn">Services and Products <ion-icon name="chevron-down-outline"></ion-icon> </a>
+        <ul class="dropdown">
+          <li> 
+            <a href="#telecom-services">Telecoms</a>
+          </li>
+          <li> 
+            <a href="#non-telecom-service">Non Telecoms</a>
+          </li>
+        </ul>
+        </li>
+        <li><a href="#contact-us">Contact</a></li>
         <li><a href="#section-about-us">about-us</a></li>
         <li><a href="#blog">News</a></li>
         <div class="search-container">
-          <input type="text" placeholder="Search.." name="search">
+          <input type="text" placeholder="Search.." id="search-input" name="search">
           <a href="#">
-            <ion-icon name="search-outlborder-radius: 100% / 0 0 30% 30%;ine" class="ion"></ion-icon>
+            <ion-icon name="search" class="ion " id="search-button"></ion-icon>
           </a>
       </div>
-
       </ul>
       </div>
     </nav> 
     <div class="wrapper">
-        <main>
+        <hr>
       <section class="hero-section" aria-label="hero-section">
         <div class="hero gri">
           <div class="text-box">
@@ -112,12 +120,13 @@
          </div>
        </div>
       </section>
-      <section class="services" id="servic">
+      <div id="search-results"></div>
+
+      <section class="services" id="telecom-services">
         <h2 class="heading-secondary">
           Comprehensive Telecom Solutions Tailored for You
           <span
-            >Unlock unparalleled telecom access and services for only
-            74,665,700 Birr.</span
+            >National Ethiontelecom Products and Services Distribution</span
           >
         </h2>
         <div class="container">
@@ -131,7 +140,7 @@
             </div>
             <div class="feature">
               <ion-icon class="feature-icon" name="wallet-outline"></ion-icon>
-              <p class="feature-title">Payment Solutions</p>
+              <p class="feature-title">Scratchable Voucher Cards</p>
               <p class="feature-text">
                 Convenient payment options for our services, ensuring that you
                 receive the best value for your investment.
@@ -139,7 +148,7 @@
             </div>
             <div class="feature">
               <ion-icon class="feature-icon" name="card-outline"></ion-icon>
-              <p class="feature-title">Innovative Solar Solutions</p>
+              <p class="feature-title">Electronics Voucher Cards-EVD</p>
               <p class="feature-text">
                 Harness solar energy with our cutting-edge solar products that
                 provide sustainable power for your telecom needs
@@ -150,7 +159,7 @@
                 class="feature-icon"
                 name="git-network-outline"
               ></ion-icon>
-              <p class="feature-title">Local Connectivity Solutions</p>
+              <p class="feature-title">Electronics Airtime E-Air Time,</p>
               <p class="feature-text">
                 We empower local businesses with tailored connectivity options,
                 driving growth and communication in every community.
@@ -158,7 +167,7 @@
             </div>
             <div class="feature">
               <ion-icon class="feature-icon" name="card-outline"></ion-icon>
-              <p class="feature-title">Tailored Telecom Services</p>
+              <p class="feature-title">Ethio Telecom Franchised Services Provider</p>
               <p class="feature-text">
                 Experience personalized telecom solutions designed to meet your
                 specific needs, ensuring connectivity everywhere in Ethiopia.
@@ -166,7 +175,7 @@
             </div>
             <div class="feature">
               <ion-icon class="feature-icon" name="card-outline"></ion-icon>
-              <p class="feature-title">Dependable Network Infrastructure</p>
+              <p class="feature-title">Sim Cards</p>
               <p class="feature-text">
                 Rely on our advanced and secure network systems that deliver
                 uninterrupted service and customer support
@@ -174,7 +183,8 @@
             </div>
             <div class="feature">
               <ion-icon class="feature-icon" name="card-outline"></ion-icon>
-              <p class="feature-title">Effortless Appointment Scheduling</p>
+              <p class="feature-title">
+     Telebirr Master Agent</p>
               <p class="feature-text">
                 Easily book maintenance and installation services through our
                 user-friendly online platform.
@@ -268,7 +278,7 @@
           </div>
         </div>
       </section>
-      <section class="section-landscape" id="service">
+      <section class="section-landscape" id="non-telecom-service">
         <div class="landscape-container">
           <div class="heading-landscape">
             <div class="heading-content">
@@ -285,7 +295,8 @@
                 class="feature-icon des-card-icon"
                 name="card-outline"
               ></ion-icon>
-              <h2 class="card-title">Convenient Payment Solutions</h2>
+              <h2 class="card-title">   Vehicles Maintenance Services
+    </h2>
               <p class="card-description">
                 Maximize your investment with our convenient payment options
                 that ensure exceptional value and flexibility.
@@ -296,7 +307,7 @@
                 class="feature-icon des-card-icon"
                 name="card-outline"
               ></ion-icon>
-              <h2 class="card-title">Local Connectivity Solutions</h2>
+              <h2 class="card-title">Janitorial and Office Cleaning Services</h2>
               <p class="card-description">
                 Tailored connectivity options empowering local businesses,
                 fostering growth and enhancing communication
@@ -307,7 +318,7 @@
                 class="feature-icon des-card-icon"
                 name="card-outline"
               ></ion-icon>
-              <h2  class="card-title">Innovative Solar Solutions</h2>
+              <h2  class="card-title">Different brands Mobile Phones Distribution</h2>
               <p class="card-description">
                 Embrace sustainability with our innovative solar products,
                 providing dependable energy for your telecom needs.
@@ -318,7 +329,7 @@
                 class="feature-icon des-card-icon"
                 name="card-outline"
               ></ion-icon>
-              <h2 class="card-title">Tailored Telecom Services</h2>
+              <h2 class="card-title">Renewable Energy Distribution</h2>
               <p class="card-description">
                 Experience personalized telecom solutions designed to meet your
                 specific needs for connectivity across Ethiopia.
@@ -327,7 +338,7 @@
           </div>
         </div>
       </section> 
-      <section class="section-timeline">
+      <section class="section-timeline" id="stpes-to-become-distributor">
       <div class="tittle-timeline">
         <h2 class="tittle-heaidng heading-secondary">
           Become EVD distributor in 3 easy-steps
@@ -369,7 +380,7 @@
         </div>
       </div>
     </section>
-     <section class="testimonials-section">
+     <section class="testimonials-section" id="testimonials">
       <div class="tesimonials-container">
           <div class="tesimonials-des">
             <div>
@@ -433,7 +444,7 @@
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
      </section>
-      <section class="choice-us">
+      <section class="choice-us" id="choice-us">
         <div class="container-you-choice-us">
       <div class="tittl">
         <h2 class="heading-secondary heading-choice-us">Why you choose Us ?</h2>
@@ -484,6 +495,8 @@
     </div>
   </section>
     <!-- Blog Section -->
+      <h2 class="heading-secondary">Our latest news and blog</h2>
+
     <div class="wrapper-blog" id="blog">
       <div class="blog-card">
         <div class="card-banner">
@@ -531,7 +544,7 @@
   
     </div>
  </main>
-      <div class="footer-container">
+      <div class="footer-container" id="footer">
       <div class="main-footer">
         <div class="logo">
           <img src="assets/Secondary-Logo.png" alt="hidasie telecom secondary logo" />
@@ -543,7 +556,7 @@
           <a href="" class="subscribe-link">subscribe</a>
           </div>
         </div> -->
-        <div class="social-link">
+        <div class="social-link" id="social-link">
         <h2>Follow Us</h2>
         <div class="social-link-icon">
         <img src="assets/social-icons/youtube.svg" />
@@ -560,7 +573,7 @@
       </div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d886.4027155853472!2d38.757429421303634!3d8.999004860110118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b857bfc04d5bb%3A0x117a3bd8c2173595!2sHidasie%20Telecom%20S.C!5e1!3m2!1sen!2set!4v1753270008247!5m2!1sen!2set" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="custom-link">
-          <div class="footer-link">
+          <div class="footer-link" id="contact-us">
             <h2>Contact us</h2>
             <a href="tel:0114-65-37-11">
               <span class="material-symbols-outlined"> phone_in_talk </span>
@@ -587,7 +600,7 @@
               <h3>Tele Garage,Addis Ababa, Ethiopia.</h3>
             </a>
           </div>
-          <div class="footer-link quick-links">
+          <div class="footer-link quick-links" id="quick-links">
             <h2>Quick Links</h2>
             <a href="#">
               <span class="material-symbols-outlined"> mouse </span>
@@ -616,7 +629,7 @@
           </div>
         </div>
       </div>
-      <div class="copy-right">
+      <div class="copy-right" id="copy-right">
         <p class="cp-text">
           ©  <span id="copy-right-year" style="margin-right: 1rem;"> curent year </span> 
            Hidasie Telecom, All rights reserved.
@@ -641,13 +654,6 @@
 
     <!-- Custom Script -->
     <script src="script.js">
-      // Mobile toggle functionality
-      // const menuToggle = document.querySelector(".menu-toggle");
-      // const navigation = document.querySelector(".navigation");
-
-      // menuToggle.addEventListener("click", () => {
-      //   navigation.classList.toggle("open");
-      // });
     </script>
   </body>
 </html>
