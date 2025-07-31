@@ -74,6 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.getElementById("search-input");
   const searchButton = document.getElementById("search-button");
   const searchResults = document.getElementById("search-results");
+
+  searchButton.onclick = function (e) {
+    searchResults.style.display = "block";
+  };
+  window.onclick = function (event) {
+    if (
+      !event.target.matches("#search-input") &&
+      !event.target.matches("#search-button")
+    ) {
+      searchResults.style.display = "none";
+    }
+  };
   const websitcontent = [
     {
       title: "Telecom Services",
@@ -189,7 +201,10 @@ document.addEventListener("DOMContentLoaded", function () {
         item.title,
         query
       )}</a></h2>
-                        <h5>${highlightText(item.description, query)}</h5>
+                        <h5><a href="${item.url}">${highlightText(
+        item.description,
+        query
+      )}</a></h5>
                        `;
       searchResults.appendChild(resultElement);
     });
@@ -274,18 +289,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const regex = new RegExp(`(${query})`, "gi");
     return text.replace(regex, '<span class="highlight">$1</span>');
   }
-  searchResults.style.display = "none";
-  searchResults.style.position = "absolute";
-  searchResults.style.backgroundColor = "#fff";
-  searchResults.style.border = "1px solid #ccc";
-  searchResults.style.padding = "10px";
-  searchResults.style.zIndex = "1000";
-  searchResults.style.width = "100%";
-  searchResults.style.maxHeight = "200px";
-  searchResults.style.overflowY = "auto";
-  searchResults.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.1)";
-  searchResults.style.borderRadius = "4px";
-  searchResults.style.fontSize = "14px";
-  searchResults.style.color = "#333";
-  searchResults.style.marginTop = "5px";
+  // searchResults.style.display = "none";
+  // searchResults.style.position = "absolute";
+  // searchResults.style.backgroundColor = "#fff";
+  // searchResults.style.border = "1px solid #ccc";
+  // searchResults.style.padding = "10px";
+  // searchResults.style.zIndex = "1000";
+  // searchResults.style.width = "100%";
+  // searchResults.style.maxHeight = "200px";
+  // searchResults.style.overflowY = "auto";
+  // searchResults.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.1)";
+  // searchResults.style.borderRadius = "4px";
+  // searchResults.style.fontSize = "14px";
+  // searchResults.style.color = "#333";
+  // searchResults.style.marginTop = "5px";
 });
