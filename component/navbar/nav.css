@@ -1,0 +1,276 @@
+:root {
+  --color-priamary2: #0c54a4;
+  --color-priamary1: #234d7c;
+  --color-priamary: #062c56;
+  --color-secondary: #faa71d;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d86a1;
+  --color-info-light: #dce1ed;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #ecf0f5;
+  --color-background1: #0c54a4;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+  --box-shadow-1: 0px -5px 3px var(--color-light);
+  /* --background-image: linear-gradient(to bottom, #0c54a4, #0c53a4d1); */
+  --backround-color: linear-gradient(to right, #062c56, #0c53a4df);
+}
+* {
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  border: none;
+  list-style: none;
+  outline: none;
+  box-sizing: border-box;
+}
+#search-results {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 8rem 16rem;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  max-height: 80%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--color-priamary); /* Fallback color */
+  color: white;
+  @media screen and (max-width: 768px) {
+    padding: 8rem 2rem;
+  }
+  @media scren and (min-width: 769px) and (max-width: 1024px) {
+    padding: 8rem 8rem;
+  }
+}
+
+#search-results h2 a {
+  color: var(--color-secondary);
+  display: inline-block;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+#search-results h5 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  width: 100%;
+  height: 6rem;
+  position: sticky;
+  top: 0rem;
+  background: var(--backround-color);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  max-width: 1600px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 4rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+}
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar-container .navbar-menu {
+  display: flex;
+  text-align: center;
+  list-style: none;
+  /* padding: 0 4rem; */
+}
+.navbar-menu li {
+  margin-left: -2rem;
+}
+.search-container {
+  height: 3rem;
+  background-color: var(--color-priamary);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: -0.3rem;
+  padding: 10px 20px;
+  border-radius: 3rem;
+  align-items: center;
+  font-weight: 500;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+    order: -1;
+  }
+}
+.search-container:hover input {
+  width: 20rem;
+}
+.search-container input {
+  color: var(--color-white);
+  width: 0;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  transition: 0.8s;
+  background-color: transparent;
+}
+.search-container .ion {
+  color: var(--color-secondary);
+  font-size: 1.8rem;
+}
+.results-count {
+  color: var(--color-white);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.3rem 5rem;
+  transition: all 0.7s ease;
+}
+.service-priducts {
+  position: relative;
+  display: inline-block;
+}
+.service-priducts a {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 111;
+  background-color: var(--color-priamary1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 0;
+  text-align: left;
+  top: 3rem;
+  left: 5rem;
+}
+.dropdown li a {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.service-priducts:hover {
+  .dropdown {
+    display: block;
+  }
+}
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active {
+  color: var(--color-secondary);
+  background-color: transparent;
+}
+.navbar-toggle {
+  display: none;
+  background-color: transparent;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+  margin: 0.5rem auto;
+  background-color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    backdrop-filter: none;
+  }
+  .search-container:hover input {
+    width: 10rem;
+  }
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--backround-color);
+    gap: 5rem !important;
+    position: absolute;
+    height: 90vh;
+    width: 20rem;
+    max-width: 1600px;
+    top: 0;
+    right: 0;
+    padding: 7rem 1rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  }
+  .navbar-container .navbar-menu.active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+  .navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar-toggle.navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .navbar-toggle.navbar-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+/* Phones */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .navigation {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--color-background1);
+    flex-direction: column;
+  }
+  .navigation.open {
+    max-height: 300px;
+  }
+  .navigation ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .navigation ul li a {
+    padding: 10px 20px;
+    display: block;
+    margin-left: 0;
+  }
+}

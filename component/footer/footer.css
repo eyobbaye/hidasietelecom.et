@@ -1,0 +1,188 @@
+:root {
+  --color-priamary2: #0c54a4;
+  --color-priamary1: #234d7c;
+  --color-priamary: #062c56;
+  --color-secondary: #faa71d;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d86a1;
+  --color-info-light: #dce1ed;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #ecf0f5;
+  --color-background1: #0c54a4;
+  /* --background-image: linear-gradient(to bottom, #0c54a4, #0c53a4d1); */
+  --background-color: linear-gradient(to right, #062c56, #0c53a4df);
+}
+html {
+  /* font-size: 10px; */
+  /* percentage of user's browser font-size setting */
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/* Footer */
+footer > .footer-container {
+  background: var(--background-color);
+  color: var(--color-white);
+  z-index: 99;
+  border-top: 1rem solid var(--color-secondary);
+  position: relative;
+}
+footer .main-footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: 1fr;
+  padding: 2rem 1rem;
+  column-gap: 4rem;
+  row-gap: 3rem;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    column-gap: 6rem;
+  }
+}
+footer .main-footer h2 {
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 1.58rem + -0.367vw, 2.25rem);
+  font-weight: 600;
+}
+
+footer .slogan {
+  font-size: clamp(1.5rem, 1.58rem + -0.367vw, 2.25rem);
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-white);
+  margin: 1rem;
+}
+footer .social-link-icon,
+footer .social-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 3rem;
+  transition: all 0.3s ease;
+}
+footer .social-link img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+footer .social-link img:hover {
+  transform: translateY(-25%);
+}
+footer .footer-about-us p {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+footer .custom-link {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-template-rows: 1fr;
+  column-gap: 6rem;
+  row-gap: rem;
+}
+footer .footer-link a {
+  color: var(--color-white);
+  display: flex;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+footer.footer-link a span {
+  color: var(--color-secondary);
+}
+footer .copy-right p {
+  text-align: center;
+  font-size: clamp(1rem, 0.839rem + 0.734vw, 1.5rem);
+  color: var(--color-white);
+  margin-top: 1rem;
+}
+@media screen and (min-width: 1025px) {
+  /* footer */
+  footer > .footer-container {
+    min-height: 450px;
+    padding: 0 4rem;
+  }
+  footer .main-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+  footer .main-footer .logo p {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #dce1ed;
+  }
+  footer .footer-link h2 {
+    font-size: 2.4rem;
+  }
+  footer .social-link {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  footer .social-link h2 {
+    font-size: 24px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: #dce1ed;
+  }
+  footer .social-link img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 2rem;
+    transition: all 300ms ease;
+  }
+  footer .footer-about-us {
+    padding: 2rem 4rem;
+  }
+  footer .custom-link {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 6rem;
+  }
+  footer .quick-links {
+    position: absolute;
+    right: 27rem;
+  }
+  footer .footer-about-us h2 {
+    font-size: 2.8rem;
+    color: var(--color-secondary);
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+  }
+  footer .copy-right p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-top: 1rem;
+  }
+}
