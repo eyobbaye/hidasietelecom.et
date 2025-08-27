@@ -15,6 +15,7 @@
   --color-dark-variant: #677483;
   --color-background: #ecf0f5;
   --color-background1: #0c54a4;
+   --background-image: linear-gradient(to right, #0c54a4, #0c53a476)
 
   --card-border-radius: 2rem;
   --border-radius-1: 0.4rem;
@@ -73,9 +74,6 @@ body {
   color: #555;
 }
 @media (min-width: 1025px) {
-  .hero-section {
-    /* padding: 4rem 2rem 0 2rem; */
-  }
   .hero {
     max-width: 160rem;
     margin: 0rem auto;
@@ -412,7 +410,7 @@ body {
     max-width: 80%;
     max-height: 90rem;
     padding: 2rem 4rem 3rem 8rem;
-    box-shadow: 0 10rem 5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.1);
     column-gap: 4rem;
     row-gap: 6rem;
     align-self: center;
@@ -603,8 +601,9 @@ body {
   }
   .container-you-choice-us {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     align-content: center;
+    padding: 2rem;
   }
   .container-you-choice-us .heading-choice-us {
     font-size: 3.6rem;
@@ -612,26 +611,29 @@ body {
     color: var(--color-priamary2);
     display: flex;
   }
+  .description{
+    grid-column: span 2;
+    padding: 3rem 0;
+  }
   .description .des {
-    color: var(--color-dark);
     font-size: 2rem;
-    line-height: 1.5;
+    line-height: 1.7;
   }
   .icons-expe {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 4rem;
-    column-gap: 2rem;
+    padding: 3rem 0 0 0;
+    /* row-gap: 2rem; */
+    /* column-gap: 2rem; */
   }
   .icon span {
     color: var(--color-secondary);
     font-size: 50px;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
   }
   .icons-expe .details {
-    font-size: 18px;
+    font-size: 1.6rem;
     font-weight: 600;
-    color: var(--color-priamary);
   }
   .wrapper-blog {
     padding: 4rem 9rem;
@@ -639,69 +641,5 @@ body {
     justify-content: space-around;
     margin: 0 auto;
   }
-  /* footer */
-  .footer-container {
-    min-height: 450px;
-    padding: 0 4rem;
-  }
-  .main-footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 2rem;
-    column-gap: 2rem;
-  }
-  .main-footer .logo p {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: #dce1ed;
-  }
-  .footer-link h2 {
-    font-size: 2.4rem;
-  }
-  .social-link {
-    align-items: center;
-    flex-direction: column;
-    margin-top: 2rem;
-  }
-  .social-link h2 {
-    font-size: 24px;
-    letter-spacing: 5px;
-    font-weight: 600;
-    color: #dce1ed;
-  }
-  .social-link img {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 2rem;
-    transition: all 300ms ease;
-  }
-  .footer-about-us {
-    padding: 2rem 4rem;
-  }
-  .custom-link {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 6rem;
-  }
-  .quick-links {
-    position: absolute;
-    right: 27rem;
-  }
-  .footer-about-us h2 {
-    font-size: 2.8rem;
-    color: var(--color-secondary);
-    letter-spacing: 3px;
-    margin-bottom: 1.5rem;
-  }
-  .copy-right p {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-secondary);
-    margin-top: 1rem;
-  }
+  
 }
