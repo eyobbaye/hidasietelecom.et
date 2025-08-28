@@ -168,28 +168,9 @@ iframe {
   padding: 1rem;
   letter-spacing: 0.1rem;
 }
-/* SECTION WORK WITH US */
+
 /* Timeline  */
-@keyframes to_up {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 .tittle-timeline {
   text-align: center;
 }
@@ -232,7 +213,7 @@ iframe {
 .checkpoint {
   padding: 2rem 0rem;
   position: relative;
-  opacity: 0; /* Start hidden */
+  opacity: 1; /* Start hidden */
   animation-range: entry 25% cover 75%;
 }
 .checkpoint:nth-child(odd) {

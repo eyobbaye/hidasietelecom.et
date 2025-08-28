@@ -50,64 +50,58 @@ fetch("/component/navbar/nav.html")
           title: "Telecom Services",
           description:
             "Explore our wide range of telecom services tailored for your needs.",
-          url: "index.html#telecom-services",
-        },
-        {
-          title: "Non Telecom Services",
-          description:
-            "Reliable and fast internet solutions for both residential and business.",
-          url: "index.html#non-telecom-service",
+          url: "./pages/service/",
         },
         {
           title: "Contacts",
           description:
             "Reach out to us via phone or email for more information .",
-          url: "index.html#contact",
+          url: "./pages/contact/",
         },
         {
           title: "About us",
           description: "Learn about our company history and team members.",
-          url: "index.html#section-about-us",
+          url: "./pages/about/",
         },
         {
-          title: "Annoumcment and news",
+          title: "Annoumcment and news , Blog",
           description: "find out our latest announcemnt and news.",
-          url: "index.html#blog",
+          url: "./pages/blog/",
         },
         {
           title: "Vehicles Maintenance Services",
           description:
             "Comprehensive  Vechille maintenance solution for your vechicles.",
-          url: "index.html#non-telecom-service",
+          url: "./pages/service/index.html#vehicle",
         },
         {
           title: "Janitorial and Office Cleaning Services",
           description:
             "Affordable cleaining services for your home and company needs.",
-          url: "index.html#non-telecom-service",
+          url: "./pages/service/index.html#janitorial",
         },
         {
           title: "Renewable Energy Distribution ",
           description:
             "Cost-effective Eco-friendly  Solar Lanterns and Home Systems for your needs.",
-          url: "index.html#non-telecom-service",
+          url: "./pages/service/index.html#solar-panel",
         },
         {
           title: "Telebirr Master Agent",
           description: "We are pround master agent of Telebirr mobile money.",
-          url: "index.html#telecom-services",
+          url: "/pages/service/index.html#telebirr",
         },
         {
           title: "Electronics Voucher Cards-EVD",
           description:
             "Nation wide distributer of Ethiotelecom's vocher card: EVD, Air-time, and sim-cardsgit",
-          url: "index.html#telecom-services",
+          url: "./pages/service/index.html#air-time",
         },
         {
           title: "Ethio Telecom Franchised Services",
           description:
             "We are proud Ethio Telecom franchised service provider.",
-          url: "index.html#telecom-services",
+          url: "./pages/service/index.html#franchised",
         },
         {
           title: "How to be EVD distributor?",
