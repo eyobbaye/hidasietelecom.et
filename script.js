@@ -33,6 +33,18 @@ fetch("/component/navbar/nav.html")
         navbarToggle.classList.toggle("active");
         navbarMenu.classList.toggle("active");
       });
+      // Add  the a link have the active class when the current page is the same as the link href
+      const currentPath = window.location.pathname.replace(/\/$/, ""); // Remove trailing slash
+      const navLinks = document.querySelectorAll(".navbar-menu li a");
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+
+      // Make the search results box appear when the search button is clicked or input is focused
 
       searchButton.onclick = function (e) {
         searchResults.style.display = "block";
@@ -56,12 +68,12 @@ fetch("/component/navbar/nav.html")
           title: "Contacts",
           description:
             "Reach out to us via phone or email for more information .",
-          url: "./pages/contact/",
+          url: "./pages/contact/index.html",
         },
         {
           title: "About us",
           description: "Learn about our company history and team members.",
-          url: "./pages/about/",
+          url: "./pages/about/index.html",
         },
         {
           title: "Annoumcment and news , Blog",
@@ -107,7 +119,7 @@ fetch("/component/navbar/nav.html")
           title: "How to be EVD distributor?",
           description:
             "Become EVD distributor in 3 easy steps,<br> Easy three steps to earn more income",
-          url: "index.html#stpes-to-become-distributor",
+          url: "/pages/service#stpes-to-become-distributor",
         },
         {
           title: "Mobile Network Services",
