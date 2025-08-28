@@ -78,7 +78,7 @@ body {
     max-width: 160rem;
     margin: 0rem auto;
     /* padding: 0rem 4.8rem; */
-    padding: 4rem 4rem 12rem 4rem;
+    padding: 10rem 4rem 12rem 4rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4.6rem;
@@ -447,123 +447,6 @@ body {
   }
   /* SECTION WORK WITH US */
   /* Timeline  */
-  .tittle h1 {
-    margin: 1em;
-    font-size: 3rem;
-    color: var(--color-priamary);
-  }
-  .checkpoint h2 {
-    margin-bottom: 0.5em;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: var(--color-secondary);
-  }
-  .tittle {
-    text-align: center;
-  }
-  .tittle p {
-    color: var(--color-secondary);
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-  }
-  .timeline {
-    margin: 5rem auto;
-    max-width: 34.15rem;
-  }
-  /* Animations for Checkpoints */
-  @keyframes fadeInSlideInLeft {
-    from {
-      opacity: 0;
-      transform: translateX(20rem); /* Start further right */
-    }
-    to {
-      opacity: 1;
-      transform: translateX(17rem); /* Original position for odd */
-    }
-  }
-  @keyframes fadeInSlideInRight {
-    from {
-      opacity: 0;
-      transform: translateX(-20rem); /* Start further left */
-    }
-    to {
-      opacity: 1;
-      transform: translateX(-16.7rem); /* Original position for even */
-    }
-  }
-  .checkpoint {
-    max-width: 34rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    position: relative;
-    opacity: 0; /* Start hidden */
-    /* Common animation properties for all checkpoints */
-    animation-fill-mode: forwards; /* Keep the end state of the animation */
-    animation-duration: 0.5s; /* Adjust duration as needed */
-    animation-timing-function: ease-out; /* Smooth animation */
-    animation-timeline: view(
-
-    ); /* Animate based on element visibility in viewport */
-    animation-range: entry 25% cover 50%; /* Adjust when animation starts/ends relative to viewport */
-  }
-  /* Specific animations for odd/even checkpoints */
-  .checkpoint:nth-child(odd) {
-    border-left: 3px solid var(--color-priamary);
-    padding-left: 3rem;
-    animation-name: fadeInSlideInLeft;
-  }
-  .checkpoint:nth-child(even) {
-    border-right: 3px solid var(--color-priamary);
-    padding-right: 3rem;
-    animation-name: fadeInSlideInRight;
-  }
-  /* Ensure the div inside checkpoint does not inherit transform */
-  .checkpoint div {
-    border: 2px solid #888;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    background-color: var(--color-priamary);
-  }
-  .checkpoint p {
-    line-height: 27px;
-    font-weight: bold;
-    color: var(--color-white);
-    font-size: 1.2rem;
-  }
-  .checkpoint:nth-child(odd)::before,
-  .checkpoint:nth-child(even)::before {
-    content: " ";
-    background: var(--color-secondary);
-    width: 3em;
-    height: 3px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .checkpoint:nth-child(odd)::before {
-    left: 0;
-  }
-  .checkpoint:nth-child(even)::before {
-    right: 0;
-  }
-  .checkpoint:nth-child(odd) div::before,
-  .checkpoint:nth-child(even) div::before {
-    content: " ";
-    background: var(--color-white);
-    box-shadow: 0 0 0.5em #0d71fc;
-    width: 0.8em;
-    height: 0.8em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-  }
-  .checkpoint:nth-child(odd) div::before {
-    left: -0.5em;
-  }
-  .checkpoint:nth-child(even) div::before {
-    right: -0.5em;
-  }
   /* Testimonials */
   .testimonials-section {
     padding: 4.5rem 9rem;
