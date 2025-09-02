@@ -1,22 +1,13 @@
-// NAVBAR MENU
-// document.addEventListener("DOMContentLoaded", () => {
-// Fetch and inject navbar.html
 fetch("/component/navbar/nav.html")
   .then((response) => response.text())
   .then((data) => {
-    // Insert the HTML into the placeholder div
     document.getElementById("navbar-placeholder").innerHTML = data;
-
-    // Wait a tick to ensure DOM updates
     requestAnimationFrame(() => {
-      // Select elements inside the newly injected HTML
       const navbarToggle = document.querySelector(".navbar-toggle");
       const navbarMenu = document.querySelector(".navbar-menu");
-
       const searchInput = document.getElementById("search-input");
       const searchButton = document.getElementById("search-button");
       const searchResults = document.getElementById("search-results");
-
       if (
         !navbarToggle ||
         !navbarMenu ||
@@ -27,14 +18,11 @@ fetch("/component/navbar/nav.html")
         console.error("Navbar elements not found");
         return;
       }
-
-      // Add event listener
       navbarToggle.addEventListener("click", () => {
         navbarToggle.classList.toggle("active");
         navbarMenu.classList.toggle("active");
       });
-      // Add  the a link have the active class when the current page is the same as the link href
-      const currentPath = window.location.pathname.replace(/\/$/, ""); // Remove trailing slash
+      const currentPath = window.location.pathname.replace(/\/$/, "");
       const navLinks = document.querySelectorAll(".navbar-menu li a");
       navLinks.forEach((link) => {
         if (link.getAttribute("href") === currentPath) {
@@ -43,9 +31,6 @@ fetch("/component/navbar/nav.html")
           link.classList.remove("active");
         }
       });
-
-      // Make the search results box appear when the search button is clicked or input is focused
-
       searchButton.onclick = function (e) {
         searchResults.style.display = "block";
       };
@@ -129,16 +114,13 @@ fetch("/component/navbar/nav.html")
         },
       ];
       searchButton.addEventListener("click", (e) => {
-        e.preventDefault(); // Prevent the form from reloading the page
+        e.preventDefault();
         const query = searchInput.value.toLowerCase().trim();
         console.log("query", query);
-
         if (!query) {
           searchResults.innerHTML = "";
           return;
         }
-
-        // 3. Filter the data based on the query
         const results = websitcontent.filter((item) => {
           return (
             item.title.toLowerCase().includes(query) ||
@@ -153,13 +135,11 @@ fetch("/component/navbar/nav.html")
           searchResults.innerHTML = `<div class="no-results">No results found for "${query}"</div>`;
           return;
         }
-        // 4. Clear previous results
         searchResults.innerHTML = "";
         if (query && results.length > 0) {
           searchResults.style.display = "block";
           searchResults.innerHTML = `<div class="results-count">${results.length} results found for "${query}"</div>`;
         }
-
         results.forEach((item) => {
           const resultElement = document.createElement("div");
           resultElement.className = "result-item";
@@ -183,9 +163,7 @@ fetch("/component/navbar/nav.html")
         } else {
           searchResults.style.display = "none";
         }
-        // Clear previous results
         searchResults.innerHTML = "";
-        // Filter the data based on the query
         const results = websitcontent.filter((item) => {
           return (
             item.title.toLowerCase().includes(query) ||
@@ -215,14 +193,12 @@ fetch("/component/navbar/nav.html")
       });
       searchButton.addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
-          e.preventDefault(); // Prevent the form from reloading the page
+          e.preventDefault();
           const query = searchInput.value.toLowerCase().trim();
-
           if (!query) {
             searchResults.innerHTML = "";
             return;
           }
-          // Filter the data based on the query
           const results = websitcontent.filter((item) => {
             return (
               item.title.toLowerCase().includes(query) ||
@@ -261,9 +237,7 @@ fetch("/component/navbar/nav.html")
   .catch((error) => {
     console.error("Error loading navbar:", error);
   });
-//start foreach loop for displaying the animated values
 let allvalues = document.querySelectorAll(".value");
-
 allvalues.forEach((singleValue) => {
   const endValue = parseInt(singleValue.getAttribute("data-value"), 10);
   const duration = Math.floor(2000 / endValue);
@@ -276,55 +250,12 @@ allvalues.forEach((singleValue) => {
     }
   }, duration);
 });
-// Testimonials
-// var slideIndex = 1;
-// showSlides(slideIndex);
-// function plusSlides(n) {
-//   showSlides((slideIndex += n));
-// }
-// function currentSlide(n) {
-//   showSlides((slideIndex = n));
-// }
-// function showSlides(n) {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   var dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) {
-//     slideIndex = 1;
-//   }
-//   if (n < 1) {
-//     slideIndex = slides.length;
-//   }
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (i = 0; i < dots.length; i++) {
-//     dots[i].className = dots[i].className.replace(" active", "");
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].className += " active";
-// }
-
-// function autoSlide() {
-//   slideIndex++;
-//   showSlides(slideIndex);
-//   setTimeout(autoSlide, 2000);
-// }
-// autoSlide();
-// Slide end
-// Search functionality
-// document.addEventListener("DOMContentLoaded", function () {
-// });
-
-// Footer loader
 document.addEventListener("DOMContentLoaded", () => {
   const footerPlaceholder = document.getElementById("footer-placeholder");
-
   fetch("/component/footer/footer.html")
     .then((response) => response.text())
     .then((data) => {
       footerPlaceholder.innerHTML = data;
-
       requestAnimationFrame(() => {
         const copyRightYear = new Date().getFullYear();
         document.querySelector("#copy-right-year").textContent = copyRightYear;

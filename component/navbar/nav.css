@@ -6,7 +6,7 @@
   --color-danger: #ff7782;
   --color-success: #41f1b6;
   --color-warning: #ffbb55;
-  --color-white: #fff;
+  --color-white: #f9f8f6;
   --color-info-dark: #7d86a1;
   --color-info-light: #dce1ed;
   --color-dark: #363949;
@@ -36,6 +36,9 @@
   list-style: none;
   outline: none;
   box-sizing: border-box;
+}
+h1{
+  font-size: 3.2rem;
 }
 #search-results {
   display: none; /* Hidden by default */
@@ -83,29 +86,39 @@
 .navbar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  padding: 0 4rem;
+  padding: 0 1rem;
   @media screen and (max-width: 768px) {
     padding: 1rem 2rem;
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 }
 .navbar-logo {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: 600;
   color: var(--color-white);
   text-decoration: none;
   cursor: pointer;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    
+  }
+}
+.navbar-logo img{
+  /* width: 12rem; */
+  @media screen and (max-width: 768px) {
+    width: 10rem;
+  }
 }
 .navbar-container .navbar-menu {
   display: flex;
   text-align: center;
+  justify-content: center;
   list-style: none;
-  /* padding: 0 4rem; */
 }
 .navbar-menu li {
-  margin-left: -2rem;
+  margin-left: -6rem;
 }
 .search-container {
   height: 3rem;
@@ -161,27 +174,6 @@
   display: flex;
   align-items: center;
   column-gap: 0.8rem;
-}
-.dropdown {
-  display: none;
-  position: absolute;
-  z-index: 111;
-  background-color: var(--color-priamary1);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
-  padding: 1rem 0;
-  text-align: left;
-  top: 3rem;
-  left: 5rem;
-}
-.dropdown li a {
-  display: block;
-  margin-top: 1rem;
-  color: var(--color-white);
-  text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 500;
 }
 .service-priducts:hover {
   .dropdown {

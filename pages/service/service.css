@@ -20,7 +20,7 @@
   --color-background1: #0c54a4;
 
   --background-image: linear-gradient(to right, #0c54a4, #0c53a476 70%),
-    url("/assets/hero.jpg");
+    url("/assets/hero.webp");
 }
 * {
   margin: 0;
@@ -44,6 +44,9 @@ iframe {
   max-width: 100%;
   height: auto;
   display: block;
+}
+h1{
+  font-size: 3.2rem;
 }
 .progress {
   position: fixed;
@@ -79,10 +82,10 @@ iframe {
   width: 90%;
 }
 #home h1 {
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 800;
-  margin-bottom: 20px;
-  line-height: 40px;
+  margin-bottom: 2rem;
+  line-height: 4rem;
   color: var(--color-white);
 }
 #home h1 span {
@@ -133,16 +136,17 @@ iframe {
 }
 .products-desc ul li {
   margin-bottom: 1rem;
-  list-style: var(--color-secondary);
+  /* list-style: var(--color-secondary); */
+  color: var(--color-priamary1);
 }
 .products-desc ul li h3 {
-  color: var(--color-secondary);
+  color: var(--color-priamary1);
 }
 .product-img {
   padding: 1rem;
 }
 .product-img img {
-  height: 30rem;
+  /* height: 30rem; */
   border-radius: 1rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
@@ -367,7 +371,7 @@ iframe {
     list-style: var(--color-secondary);
   }
   .products-desc ul li h3 {
-    color: var(--color-secondary);
+    color: #724c0d;
     margin-bottom: 0.6 rem;
   }
   .product-img {
@@ -450,7 +454,8 @@ iframe {
 }
 .tittle-timeline .tittle-tag {
   font-size: 2.6rem;
-  color: var(--color-secondary);
+  /* color: var(--color-secondary); */
+  color: #724c0d;
   margin-bottom: 0.5rem;
 }
 .tittle-timeline {
@@ -534,7 +539,7 @@ iframe {
   box-shadow: 0 7px 1px var(--color-secondary);
   border-radius: 1rem;
   padding: 1.5rem;
-  background-color: var(--color-priamary2);
+  background-color: var(--color-priamary);
 }
 .checkpoint:nth-child(even) {
   margin-top: 4rem;
