@@ -76,6 +76,7 @@ h1{
   justify-content: center;
   align-items: center;
   height: 70vh;
+  margin-top: 6rem;
 }
 #home .home-header {
   padding-top: 2rem;
