@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/component/navbar/nav.css" />
+  <link rel="stylesheet" href="/component/navbar/nav.css" media="all" />
   <title>Navigation Bar</title>
 </head>
 
@@ -12,35 +12,23 @@
   <nav>
     <div class="navbar">
       <div class="navbar-container">
-        <a href="/" class="navbar-logo"><img src="/assets/Secondary-Logo.png" alt="hidasie telecom secondary logo"
-            width="200" /></a>
-        <button class="navbar-toggle">
+        <a href="/" class="navbar-logo"><img loading="lazy" src="/assets/logo-primary.webp"
+            alt="hidasie telecom secondary logo" width="50%" height="10%" /></a>
+        <button class="navbar-toggle" title="Menu-toggle">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
         <ul class="navbar-menu">
           <li><a href="/">Home</a></li>
-          <li class="service-priducts"><a href="/pages/service" class="dropbtn">Services
-              <!-- <ion-icon name="chevron-down-outline"></ion-icon> -->
-            </a>
-            <!-- <ul class="dropdown">
-              <li>
-                <a href="#telecom-services">Telecoms</a>
-              </li>
-              <li>
-                <a href="#non-telecom-service">Non Telecoms</a>
-              </li>
-            </ul> -->
-          </li>
+          <li><a href="/pages/service">Services</a></li>
           <li><a href="/pages/contact">Contact</a></li>
           <li><a href="/pages/about">About us</a></li>
           <li><a href="#">Blog</a></li>
-
         </ul>
         <div class="search-container">
           <input type="text" placeholder="Search.." id="search-input" name="search" />
-          <a href="#">
+          <a href="#" class="search-icon" title="Search">
             <ion-icon name="search" class="ion" id="search-button"></ion-icon>
           </a>
         </div>

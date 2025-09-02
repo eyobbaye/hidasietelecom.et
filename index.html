@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <link href="query.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="query.css" rel="stylesheet" media="all">
+  <link href="style.css" rel="stylesheet" media="all">
   <link rel="icon" href="assets/ht.png" />
   <title>Home</title>
 </head>
@@ -48,13 +48,13 @@
               access across Ethiopia over 800 shops nationwide,
             </p>
             <span class="btn-box">
-              <a href="/pages/service/" style="color: rgb(241, 160, 10);">
+              <a href="/pages/service/" style="color: rgb(241, 160, 10);" title="our service">
                 <button type="button" class="btn-our-service">
                   check our service
               </a>
               </button>
-              <a href="#" class="icon-btn play-btn
-            " type="button">
+              <a href="https://www.youtube.com/embed/vqKrL6ir8kk?playlist=vqKrL6ir8kk&loop=1&mute=1&autoplay=1&controls=0" class="icon-btn play-btn
+            " type="button" title="watch video">
                 <ion-icon class="play-icon" name="play-outline"></ion-icon>
               </a>
               <span class="watch-video-text"> Watch Video</span>
@@ -62,7 +62,7 @@
           </div>
           <div class="img">
             <img src="assets/hero.gif" class="hidasie-service"
-              alt="image of women with icon of hidasietelecom secrvie around women">
+              alt="image of women with icon of hidasietelecom secrvie around women" width="450px" height="100%" loading="lazy" />
 
           </div>
         </div>
@@ -100,7 +100,7 @@
         <div class="container">
 
           <div class="feature-image">
-            <img class="img feature-img" src="assets/public.avif" alt="image of server with cloud and music icon" />
+            <img class="feature-imge" src="assets/public.webp" width="960" height="540" alt="image of server with cloud and music icon" style="aspect-ratio: 16 / 9;" />
           </div>
           <div class="feature">
             <ion-icon class="feature-icon" name="wallet-outline"></ion-icon>
@@ -166,9 +166,9 @@
             </p>
           </div>
           <div class="stand-img">
-            <img class="women-img" loading="lazy" src="assets/business_woman.png" role="img"
-              alt="standing woman hands in her pockets" />
-          </div>
+            <img class="women-img" loading="lazy" src="assets/business_woman.webp"
+              style="aspect-ratio: 350 / 512; width: 350px; height: auto;"
+              alt="standing woman hands in her pockets"/>
         </div>
       </section>
       <section class="section-about-us" id="section-about-us">
@@ -186,7 +186,7 @@
                     </h2>
                   </div>
                   <div class="about-img">
-                    <img src="assets/Headquarter-Building.png" />
+                    <img src="assets/Headquarter-Building.webp" alt="Modern multi-story office building labeled HEDASSIE TELECOM, illuminated at night with people and vehicles in front, surrounded by trees and other tall buildings, conveying a sense of progress and professionalism"  width="100%" height="100%" loading="lazy" /> 
 
                     <div class="tag">
                       <p><span>13+</span> Years of Pioneering Telecommunications</p>
@@ -223,7 +223,7 @@
                   </p>
                 </div>
               </div>
-              <a href="" class="contact-us-link">contact us today</a>
+              <a href="/pages/contact/" class="contact-us-link" title="contact-us-link">contact us today</a>
             </div>
           </div>
         </div>
@@ -276,48 +276,6 @@
           </div>
         </div>
       </section>
-      <!-- <section class="section-timeline" id="stpes-to-become-distributor">
-      <div class="tittle-timeline">
-        <h2 class="tittle-heaidng heading-secondary">
-          Become EVD distributor in 3 easy-steps
-        </h2>
-        <p class="tittle-tag">Easy three steps to earn more income</p>
-      </div>
-      <div class="timeline">
-        <div class="checkpoint">
-          <div>
-            <h2>Step 1: Register </h2>
-            <p>Vist our shops nerest to your location to open a distributor account. </p>
-          </div>
-        </div>
-        <div class="checkpoint">
-          <div>
-            <h2>Step 2: Look for an agents</h2>
-            <p> Find a Hidasie agent you would like to buy airtime from or
-              build your own agent network and buy airtime directly from
-              Hidasie Telecom. </p>
-          </div>
-        </div>
-        <div class="checkpoint">
-          <div>
-            <h2>Step 3: Start Selling</h2>
-            <p> Buy e-vochers from hidasietelecom in bulk and start selling them with profit. </p>
-          </div>
-        </div>
-        <div class="checkpoint">
-          <div>
-            <h2>Day 4: Create your on Sells-person</h2>
-            <p> You can create your on Sells-person and start selling the eletronic vocher distribution and make more profit.</p>
-          </div>
-        </div>
-        <div class="checkpoint">
-          <div>
-            <h2>Day 5: Get Support</h2>
-            <p> Get reltime support about the electronic vocher distribution. contact our shops for more support and EVD related qustions. </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
       <!-- <section class="testimonials-section" id="testimonials">
       <div class="tesimonials-container">
           <div class="tesimonials-des">
@@ -386,16 +344,15 @@
         <h1>Our Partners</h1>
         <div class="slider">
           <div class="slider-items">
-            <img src="https://oauthteledrive.ethiotelecom.et/ethio_tel_logo_250.png" alt="">
+            <img src="/assets/ethiotelecom.webp" width="2048" height="564" loading="lazy"  alt="Ethi Telecom logo">
             <img
-              src="https://digitalfinance.shega.co/_next/image?url=https%3A%2F%2Fshegastrpool.blob.core.windows.net%2Fdfs-prod%2Fdfs-prod%2Fcms%2Fdownload_25368715ce.png&w=1920&q=75"
-              alt="">
+              src="/assets/Amhara_Bank.webp" width="125px" height="51.5px" loading="lazy"
+              alt="Amahara bank logo">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWBYOkdA_IT8xpS07tWNi5uACrDxZe2iZyEkNYFMmGEtToDYAGJhemnlJD22l9l7VbAdo&usqp=CAU"
-              alt="">
-            <img src="https://teleportet.com/wp-content/uploads/2022/01/Teleport-ai.png" alt="">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7RmTpSkPVR_5atud7K8QfODcLAQEb5HkG2w&s"
-              alt="">
+              src="/assets/abay bank.webp" width="250px" height="103px" loading="lazy"
+              alt="abay bank logo">
+            <img src="/assets/Teleport-ai.webp"  width="250px" height="103px" loading="lazy" alt="teleportet logo">
+            <img src="/assets/codelight.webp" width="250px" height="103px"  loading="lazy" alt="codelight logo">
           </div>
         </div>
 
@@ -457,10 +414,10 @@
         <div class="blog-card">
           <div class="card-banner">
             <p class="catagory-tag popular">Rebranding</p>
-            <img class="banner-img" src='assets/ht.png' alt=''>
+            <img class="banner-img" src='assets/ht.webp' alt='hidasietelecom new logo'>
           </div>
           <div class="card-body">
-            <p class="blog-hashtag">#DEsign #Branding</p>
+            <p class="blog-hashtag">#Design #Branding</p>
             <h2 class="blog-title">Rebradnig HidasieTelecom </h2>
             <p class="blog-description">When FIRMA took on the rebranding of Hidassie Telecom rebranding
               hidasietelecom... </p>

@@ -39,7 +39,7 @@ iframe {
   display: block;
 }
 /* Footer */
-footer > .footer-container {
+footer  .footer-container {
   background: var(--background-color);
   color: var(--color-white);
   z-index: 99;
@@ -77,8 +77,9 @@ footer .social-link-icon,
 footer .social-link {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 3rem;
+  column-gap: 2rem;
   transition: all 0.3s ease;
 }
 footer .social-link img {
@@ -99,14 +100,23 @@ footer .custom-link {
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   grid-template-rows: 1fr;
   column-gap: 6rem;
-  row-gap: rem;
+  row-gap: 1rem;
+  /* background-color: red; */
+}
+footer .footer-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
 }
 footer .footer-link a {
-  color: var(--color-white);
+  color: var(--color-white);  
   display: flex;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-decoration: none;
   margin: 0.5rem 0;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
   transition: all 0.3s ease;
 }
@@ -116,12 +126,15 @@ footer.footer-link a span {
 footer .copy-right p {
   text-align: center;
   font-size: clamp(1rem, 0.839rem + 0.734vw, 1.5rem);
-  color: var(--color-white);
-  margin-top: 1rem;
+  color: var(--color-secondary);
+  margin-top: 1.6rem;
 }
+ footer .footer-about-us h2{
+  color: var(--color-secondary);
+ }
 @media screen and (min-width: 1025px) {
   /* footer */
-  footer > .footer-container {
+  footer .footer-container {
     min-height: 450px;
     padding: 0 4rem;
   }
@@ -144,14 +157,13 @@ footer .copy-right p {
   }
   footer .social-link {
     align-items: center;
-    flex-direction: column;
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
   footer .social-link h2 {
     font-size: 24px;
     letter-spacing: 5px;
     font-weight: 600;
-    color: #dce1ed;
+    color: var(--color-white);
   }
   footer .social-link img {
     width: 4rem;
@@ -165,24 +177,37 @@ footer .copy-right p {
   footer .custom-link {
     display: flex;
     justify-content: space-between;
+    gap: .5rem;
     margin-left: 6rem;
   }
+footer .footer-link{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
   footer .quick-links {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
     right: 27rem;
   }
+  
   footer .footer-about-us h2 {
     font-size: 2.8rem;
     color: var(--color-secondary);
     letter-spacing: 3px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   footer .copy-right p {
     display: flex;
     justify-content: center;
+    color: var(--color-secondary);
     font-size: 18px;
     font-weight: 600;
-    color: var(--color-secondary);
-    margin-top: 1rem;
+    margin-top: 10rem;
   }
 }
