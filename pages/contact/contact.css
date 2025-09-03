@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 /* @import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2-0/css/ionicons.min.css"); */
-
+#home {
+  padding-top: 80px; /* a little more than navbar height */
+}
 :root {
   --color-priamary2: #0c54a4;
   --color-priamary1: #234d7c;
@@ -371,4 +373,14 @@ section {
   .contact-page-form form {
     padding: 20px 15px 0;
   }
+}
+.row.address {
+  display: flex;
+  justify-content: space-between; /* adds space between columns */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 30px; /* adds fixed horizontal spacing */
+}
+.row.address .col-md-4 {
+  flex: 1; /* each column takes equal width */
+  min-width: 200px; /* prevents shrinking too much */
 }
