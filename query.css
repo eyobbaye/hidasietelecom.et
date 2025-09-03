@@ -25,7 +25,7 @@
   --padding-1: 1.2rem;
   --box-shadow: 0 2rem 3rem var(--color-light);
   --box-shadow-1: 0px -5px 3px var(--color-light);
-  --background-color: linear-gradient(to right, #062c56, #0c53a4df);
+  --background-color: linear-gradient(to right, #062c56, #0c53a4);
 }
 * {
   padding: 0;
@@ -101,11 +101,14 @@ iframe {
   color: var(--color-secondary);
   animation: to_right 1s ease forwards 1.5s;
 }
+.text-rate{
+  padding: 1rem;
+}
 .text-rate,
 .btn-our-service {
   border: 1px solid var(--color-white);
   color: var(--color-white);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 5rem;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   transition: all ease 0.3s;

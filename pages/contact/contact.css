@@ -24,7 +24,7 @@ body {
   --color-background: #ecf0f5;
   --color-background1: #0c54a4;
 
-  --background-image: linear-gradient(to right, #0c54a4, #0c53a476 70%),
+  --background-image: linear-gradient(to right, #0c54a4, #0c53a476),
     url("/assets/hero.webp");
 }
 * {
@@ -93,7 +93,7 @@ img {
   margin-bottom: 24px;
 }
 section {
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
 }
 .address {
   margin-top: 2rem;
@@ -203,7 +203,7 @@ section {
   margin-top: 2rem;
 }
 @media screen and (max-width: 768px) {
-  #home {
+   #home {
     height: 50vh;
   padding-top: 2rem;
   }
@@ -226,14 +226,12 @@ section {
     justify-content: start;
     align-items: center;
     top: 50%;
-    /* height: 100%; */
   }
   #home .home-header {
-    /* padding: 4rem 2rem; */
     padding: 4rem;
   }
   #home h1 {
-    font-size: 62px;
+    font-size: 5.6rem;
     font-weight: 800;
     margin-bottom: 30px;
     line-height: 70px;
@@ -243,9 +241,9 @@ section {
     width: 50%;
     color: var(--color-white);
     font-weight: 200;
-    font-size: 28px;
+    font-size: 2.4rem;
     line-height: 3rem;
-    margin-bottom: 48px;
+    /* margin-bottom: 48px; */
   }
   /* section {
     padding: 4rem 0;
