@@ -1,3 +1,5 @@
+
+
 fetch("/component/navbar/nav.html")
   .then((response) => response.text())
   .then((data) => {
@@ -263,3 +265,4 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error loading nav:", error));
 });
+

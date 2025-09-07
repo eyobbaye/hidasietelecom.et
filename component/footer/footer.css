@@ -194,8 +194,10 @@ footer .footer-link{
     justify-content: space-between;
     gap: .5rem;
     right: 27rem;
+    
   }
-  
+
+   
   footer .footer-about-us h2 {
     font-size: 2.8rem;
     color: var(--color-secondary);
@@ -210,4 +212,5 @@ footer .footer-link{
     font-weight: 600;
     margin-top: 10rem;
   }
-}
+} 
+
