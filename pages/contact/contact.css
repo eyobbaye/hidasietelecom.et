@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-/* @import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2-0/css/ionicons.min.css"); */
+
+ @import url("https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2-0/css/ionicons.min.css"); 
 #home {
   padding-top: 60px; /* a little more than navbar height */
 }
 body {
   padding-top: 7rem; /* ~3cm space below navbar */
 }
+
 :root {
   --color-priamary2: #0c54a4;
   --color-priamary1: #234d7c;
